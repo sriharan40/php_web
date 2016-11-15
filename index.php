@@ -30,7 +30,7 @@ echo '<td>'.$child1["offer_name"].'</td>';
 
 echo '<td>'.$child1["description"].'</td>';
 
-echo '<td><a href="index.php?id='.$child1["id"].'">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="index.php?id='.$child1["id"].'">Delete</a></td>';
+echo '<td><a href="edit.php?id='.$child1["id"].'">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="edit.php?id='.$child1["id"].'">Delete</a></td>';
 
 ?>
 
