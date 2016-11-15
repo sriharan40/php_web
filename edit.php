@@ -10,7 +10,7 @@ $arr = json_decode($data, true);
 
 ?>
 </br />
-<h3><u>Offers List</u></h3>
+<h3><u>Edit Offers</u></h3>
 </br>
 <a href="index.php">Add New</a>
 </br></br>
