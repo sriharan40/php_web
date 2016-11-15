@@ -1,3 +1,6 @@
+<html>
+<title>Offers List</title>
+<body>
 <?php
 error_reporting(0);
 
@@ -39,3 +42,5 @@ echo '<td><a href="index.php?id='.$child1["id"].'">Edit</a> &nbsp;&nbsp;&nbsp;&n
 ?>
 </tbody>
 </table>
+</body>
+</html>
