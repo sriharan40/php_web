@@ -1,10 +1,14 @@
 <html>
-<title>Offers List</title>
+<title>Top Offers List</title>
 <body>
 <?php
 error_reporting(0);
 
 $id = $_GET["id"];
+
+echo $offer_name = $_POST["offer_name"];
+
+echo $link = $_POST["link"];
 
 if($id)
 {
@@ -18,7 +22,7 @@ $arr = json_decode($data, true);
 
 ?>
 <br/>
-<h3><u>Offers List</u></h3>
+<h3><u>Top Offers List</u></h3>
 <br/>
 <a href="edit.php">Add New</a>
 <br/><br/>
