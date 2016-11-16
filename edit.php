@@ -4,7 +4,6 @@
 <?php
 error_reporting(0);
 ?>
-<br/>
 <h3><u>Add Top Offers</u></h3>
 <br/><br/>
 <form type="POST" action="index.php" name="form1">
@@ -17,7 +16,7 @@ error_reporting(0);
 <td>Description / Link</td><td><input type="text" name="link" value="" /></td>
 </tr>
 <tr>
-<td>&nbsp;</td><td>Action</td>
+<td>&nbsp;</td><td><input type="submit" value="Submit" /></td>
 </tr>
 </tbody>
 </table>
