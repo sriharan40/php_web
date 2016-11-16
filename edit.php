@@ -1,9 +1,24 @@
 <html>
 <title>Add Top Offers</title>
-<body>
+<body style="margin:0 auto;">
+<style>
+ol li{	
+padding:5px;
+padding-left:0px;	
+}
+</style>
 <?php
 error_reporting(0);
 ?>
+<div style="float:left; width:200px;  padding-left:20px; border-right:1px solid #333333; height:100%;">
+<h3><u>Quick Links</u></h3>
+<ol>
+<li><a href="index.php">Top Offers</a></li>
+<li><a href="https://www.dashbot.io/login" target="blank">Dashbot Analytics</a></li>
+<li><a href="https://console.api.ai/api-client/#/login">API AI</a></li>
+</ol>
+</div>
+<div style="float:left; padding-left:20px;">
 <h3><u>Add Top Offers</u></h3>
 <br/><br/>
 <form method="POST" action="index.php" name="form1">
@@ -20,5 +35,6 @@ error_reporting(0);
 </tr>
 </tbody>
 </table>
+</div>
 </body>
 </html>
