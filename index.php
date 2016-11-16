@@ -6,9 +6,16 @@ error_reporting(0);
 
 $id = $_GET["id"];
 
-echo $offer_name = $_POST["offer_name"];
+$offer_name = $_POST["offer_name"];
 
-echo $link = $_POST["link"];
+$link = $_POST["link"];
+
+if($offer_name && $link)
+{
+{
+file_get_contents("https://paypal-payout.herokuapp.com/?offer_name=".$offer_name."&description=".$link."");	
+header("Refresh:0");	
+}
 
 if($id)
 {
