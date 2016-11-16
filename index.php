@@ -12,13 +12,15 @@ $link = $_POST["link"];
 
 if($offer_name && $link)
 {
-file_get_contents("https://paypal-payout.herokuapp.com/?offer_name=".$offer_name."&description=".$link."");	
+echo $url = "https://paypal-payout.herokuapp.com/?offer_name=".$offer_name."&description=".$link."";
+file_get_contents($url);	
 header("Refresh:0");	
 }
 
 if($id)
 {
-file_get_contents("https://paypal-payout.herokuapp.com/?delete_offer=1&id=".$id."");	
+echo $url = "https://paypal-payout.herokuapp.com/?delete_offer=1&id=".$id."";
+file_get_contents($url);	
 header("Refresh:0");
 }
 
