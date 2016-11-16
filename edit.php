@@ -6,7 +6,7 @@ error_reporting(0);
 ?>
 <h3><u>Add Top Offers</u></h3>
 <br/><br/>
-<form type="POST" action="index.php" name="form1">
+<form method="POST" action="index.php" name="form1">
 <table cellspacing="0" cellpadding="10" border="1">
 <tbody>
 <tr>
