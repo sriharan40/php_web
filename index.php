@@ -1,6 +1,12 @@
 <html>
 <title>Top Offers List</title>
-<body>
+<body style="margin:0 auto;">
+<style>
+ol li{	
+padding:5px;
+padding-left:0px;	
+}
+</style>
 <?php
 error_reporting(0);
 
@@ -21,12 +27,18 @@ if($id)
 $url = 'https://paypal-payout.herokuapp.com/?delete_offer=1&id='.$id.'';
 file_get_contents($url);
 }
-
 $data =  file_get_contents("https://paypal-payout.herokuapp.com/?offer=1");
-
 $arr = json_decode($data, true);
-
 ?>
+<div style="float:left; width:200px;  padding-left:20px; border-right:1px solid #333333; height:100%;">
+<h3><u>Quick Links</u></h3>
+<ol>
+<li><a href="index.php">Top Offers</a></li>
+<li><a href="https://www.dashbot.io/login" target="blank">Dashbot Analytics</a></li>
+<li><a href="https://console.api.ai/api-client/#/login">API AI</a></li>
+</ol>
+</div>
+<div style="float:left; padding-left:20px;">
 <h3><u>Top Offers List</u></h3>
 <br/>
 <a href="edit.php">Add New</a>
@@ -59,5 +71,6 @@ echo '<td>&nbsp;&nbsp; <a href="index.php?id='.$child1["id"].'">Delete</a></td>'
 ?>
 </tbody>
 </table>
+</div>
 </body>
 </html>
