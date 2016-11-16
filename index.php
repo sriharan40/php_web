@@ -14,7 +14,11 @@ $id = $_GET["id"];
 
 $offer_name = $_POST["offer_name"];
 
+$offer_name = str_replace(" ", "%20", $offer_name);
+
 $link = $_POST["link"];
+
+$link = str_replace(" ", "%20", $link);
 
 if($offer_name && $link)
 {
