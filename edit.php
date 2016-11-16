@@ -1,45 +1,24 @@
 <html>
-<title>Offers List</title>
+<title>Add Top Offers</title>
 <body>
 <?php
 error_reporting(0);
-
-$data =  file_get_contents("https://paypal-payout.herokuapp.com/?offer=1");
-
-$arr = json_decode($data, true);
-
 ?>
-</br />
-<h3><u>Edit Offers</u></h3>
-</br>
-<a href="index.php">Add New</a>
-</br></br>
+<br/>
+<h3><u>Add Top Offers</u></h3>
+<br/><br/>
+<form type="POST" action="index.php" name="form1">
 <table cellspacing="0" cellpadding="10" border="1">
 <tbody>
-<th>Offer Name</th>
-<th>Description / Link</th>
-<th>Action</th>
-<?php
-foreach($arr as $child) {
-
-foreach($child as $child1) {
-?>
 <tr>
-<?php
-echo '<td>'.$child1["offer_name"].'</td>';
-
-echo '<td>'.$child1["description"].'</td>';
-
-echo '<td><a href="index.php?id='.$child1["id"].'">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="index.php?id='.$child1["id"].'">Delete</a></td>';
-
-?>
-
+<td>Offer Name</td><td><input type="text" name="offer_name" value="" /></td>
 </tr>
-<?php
-}
-
-}
-?>
+<tr>
+<td>Description / Link</td><td><input type="text" name="link" value="" /></td>
+</tr>
+<tr>
+<td>&nbsp;</td><td>Action</td>
+</tr>
 </tbody>
 </table>
 </body>
