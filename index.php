@@ -31,19 +31,9 @@ $data =  file_get_contents("https://paypal-payout.herokuapp.com/?offer=1");
 $arr = json_decode($data, true);
 ?>
 <div style="float:left; width:200px;  padding-left:20px; border-right:1px solid #333333; height:100%;">
-<h3><u>Bot Performance and Analytics</u></h3>
-<ol>
-<li><a href="https://www.dashbot.io/login" target="blank">Dashbot Analytics</a></li>
-</ol>
-
-<h3><u>Bot Training</u></h3>
-<ol>
-<li><a href="https://console.api.ai/api-client/#/login">API AI</a></li>
-</ol>
-<h3><u>Business Cases</u></h3>
-<ol>
-<li><a href="index.php">Top Selling Offers</a></li>
-</ol>
+<?php
+include("menu.php");
+?>
 </div>
 <div style="float:left; padding-left:20px;">
 <h3><u>Top Offers List</u></h3>
