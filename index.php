@@ -21,7 +21,6 @@ $data =  file_get_contents("https://paypal-payout.herokuapp.com/?offer=1");
 $arr = json_decode($data, true);
 
 ?>
-<br/>
 <h3><u>Top Offers List</u></h3>
 <br/>
 <a href="edit.php">Add New</a>
