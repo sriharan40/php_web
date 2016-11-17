@@ -24,10 +24,10 @@ li a:hover:not(.active) {
     color: white;
 }
 </style>
-<h3><u>Bot Performance and Analytics</u></h3>
+<ul><h3>Bot Performance and Analytics</h3>
 <ol>
 <li><a href="https://www.dashbot.io/login" target="blank">Dashbot Analytics</a></li>
-</ol>
+    </ol></ul>
 
 <h3><u>Bot Training</u></h3>
 <ol>
