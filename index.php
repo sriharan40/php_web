@@ -6,6 +6,22 @@ ol li{
 padding:5px;
 padding-left:0px;	
 }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
 </style>
 <?php
 error_reporting(0);
