@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
 <title>Top Offers List</title>
 <body style="margin:0 auto;">
@@ -49,6 +52,11 @@ th {
 </style>
 <?php
 error_reporting(0);
+
+if ($_SESSION['login'] == "")
+{
+	header("location:login.php");	
+}
 
 $id = $_GET["id"];
 
