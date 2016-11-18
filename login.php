@@ -15,15 +15,16 @@ error_reporting(0);
 	
 if($_POST["submit"])
 {
-echo "Working";
-	
-echo $loginid = $_POST["loginid"];
+$loginid = $_POST["loginid"];
 	
 $pass = $_POST["pass"];
 
-echo $pass = md5($pass);
+$pass = md5($pass);
 
 $conn = mysql_connect('us-cdbr-iron-east-04.cleardb.net','b213965cc9ad75','9c81ac99');
+
+echo "Working";
+
   if(!$conn)
     {
 		die("Could not connect" . mysql_error());
@@ -38,7 +39,7 @@ $conn = mysql_connect('us-cdbr-iron-east-04.cleardb.net','b213965cc9ad75','9c81a
 	$rs=mysql_query("select * from admin_user where login='$loginid' and pass='$pass'");
 	if(mysql_num_rows($rs)<1)
 	{
-		$found="N";
+		echo $found="N";
 	}
 	else
 	{
