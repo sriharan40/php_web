@@ -10,8 +10,6 @@ session_start();
 <body>
 <?php
 error_reporting(0);
-
-//extract($_POST);
 	
 if($_POST["submit"])
 {
@@ -21,46 +19,27 @@ $pass = $_POST["pass"];
 
 $pass = md5($pass);
 
-try
+$url = 'https://paypal-payout.herokuapp.com/?user_name='.$loginid.'&password='.$pass.'';
+
+$result = file_get_contents($url);
+
+if($result == "Valid User")
 {
-/* $conn = mysql_connect('us-cdbr-iron-east-04.cleardb.net','b213965cc9ad75','9c81ac99');
+$_SESSION['login']=$loginid;
 
-  if(!$conn)
-    {
-		die("Could not connect" . mysql_error());
-	}
-	
- $db =mysql_select_db("heroku_a0067bd7c868fc0", $conn);
-  if(!$db)
-    {
-		die("Could not select database" . mysql_error());
-    }
-	
-	$rs=mysql_query("select * from admin_user where login='$loginid' and pass='$pass'");
-	if(mysql_num_rows($rs)<1)
-	{
-		$found="N";
-	}
-	else
-	{
-		$_SESSION['login']=$loginid;
-		header("location:index.php");	
-	} */
-
-  	    $_SESSION['login']=$loginid;
-		
-		header("location:index.php");
+header("location:index.php");
 }
-catch (Exception $e) 
+
+else if($result == "Invalid User")
 {
-	echo 'Caught exception: ',  $e->getMessage(), "\n";
+$found="N";
 }
 
 }
 ?>
 <br /><br /><br /><br />
 <br /><br />
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<table width="100%" border="0" cellpadding="5" cellspacing="0">
 <tr>
 <td width="35%"></td>
 <td width="30%" style="border: 1px solid ##4CAF50; color: white; font-weight:bold;" bgcolor="##4CAF50" height="30"><div align="center" style="font-size:18px;" class="style1">Login</div></td>
@@ -70,7 +49,7 @@ catch (Exception $e)
     <td width="35%"></td>
     <td width="20%" style="border: 1px solid #0080ff" valign="top">
 	<form name="form1" method="post" action="">
-      <table width="100%" cellpadding="9" cellspacing="0" border="0">
+      <table width="100%" cellpadding="8" cellspacing="8" border="0">
         <tr>
           <td><span class="style2">Username</span></td>
           <td><input name="loginid" type="text" id="loginid2"></td>
