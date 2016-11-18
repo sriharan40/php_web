@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
 <title>Add Top Offers</title>
 <body style="margin:0 auto;">
@@ -49,6 +52,10 @@ padding-left:0px;
 </style>
 <?php
 error_reporting(0);
+if ($_SESSION['login'] == "")
+{
+	header("location:login.php");	
+}
 ?>
 <div style="float:left; width:200px;  padding-left:20px; border-right:1px solid #333333; height:100%;">
 <?php
