@@ -38,3 +38,4 @@ li a:hover:not(.active) {
 <li><a href="index.php">Top Selling Offers</a></li>
 <li><a href="index.php">Broadcast to FB users</a></li>
     </ol></ul>
+<h4><u><a href="logout.php">Logout</a></u></h4>
