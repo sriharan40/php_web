@@ -13,8 +13,10 @@ error_reporting(0);
 
 //extract($_POST);
 	
-if(isset($submit))
+if($_POST["submit"])
 {
+echo "Working";
+	
 echo $loginid = $_POST["loginid"];
 	
 $pass = $_POST["pass"];
