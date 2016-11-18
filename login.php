@@ -11,7 +11,7 @@ session_start();
 <?php
 error_reporting(0);
 
-extract($_POST);
+//extract($_POST);
 
  $conn = mysql_connect('us-cdbr-iron-east-04.cleardb.net','b213965cc9ad75','9c81ac99');
   if(!$conn)
