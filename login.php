@@ -39,12 +39,12 @@ $conn = mysql_connect('us-cdbr-iron-east-04.cleardb.net','b213965cc9ad75','9c81a
 	$rs=mysql_query("select * from admin_user where login='$loginid' and pass='$pass'");
 	if(mysql_num_rows($rs)<1)
 	{
-		echo $found="N";
+		$found="N";
 	}
 	else
 	{
-		$_SESSION['login']=$loginid;
-		header("location:index.php");	
+		//$_SESSION['login']=$loginid;
+		//header("location:index.php");	
 	}
 }
 catch (Exception $e) 
