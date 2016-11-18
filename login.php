@@ -21,9 +21,9 @@ $pass = $_POST["pass"];
 
 $pass = md5($pass);
 
+try
+{
 $conn = mysql_connect('us-cdbr-iron-east-04.cleardb.net','b213965cc9ad75','9c81ac99');
-
-echo "Working";
 
   if(!$conn)
     {
@@ -46,6 +46,12 @@ echo "Working";
 		$_SESSION['login']=$loginid;
 		header("location:index.php");	
 	}
+}
+catch
+{
+	echo "Mysql_connect not working in heroku";
+}
+
 }
 ?>
 <br /><br /><br /><br />
