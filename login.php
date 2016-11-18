@@ -12,8 +12,11 @@ session_start();
 error_reporting(0);
 
 //extract($_POST);
-
- $conn = mysql_connect('us-cdbr-iron-east-04.cleardb.net','b213965cc9ad75','9c81ac99');
+$loginid = $_POST["loginid"];
+	
+$pass = $_POST["pass"];
+	
+$conn = mysql_connect('us-cdbr-iron-east-04.cleardb.net','b213965cc9ad75','9c81ac99');
   if(!$conn)
     {
 		die("Could not connect" . mysql_error());
