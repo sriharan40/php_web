@@ -47,9 +47,9 @@ $conn = mysql_connect('us-cdbr-iron-east-04.cleardb.net','b213965cc9ad75','9c81a
 		header("location:index.php");	
 	}
 }
-catch
+catch (Exception $e) 
 {
-	echo "Mysql_connect not working in heroku";
+	echo 'Caught exception: ',  $e->getMessage(), "\n";
 }
 
 }
