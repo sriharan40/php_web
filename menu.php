@@ -111,6 +111,55 @@ th {
 td {
 	border-bottom:1px solid #f4f4f4;
 }
+code, blockquote {
+	display:block;
+	border-left:5px solid #ddd;
+	padding:10px;
+	margin-bottom:20px;
+}
+blockquote p {
+	font-style:italic;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	margin:0;
+	height: 1%;
+}
+p {
+	line-height:1.9em;
+	margin-bottom:20px;
+}
+a {
+	color:#0D3C84;
+}
+	h1 {
+	font-size:45px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+h2 {
+	color:#061C41;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:30px;
+	font-weight:bold;
+	letter-spacing:-2px;
+	padding:0 0 5px;
+	margin:0;
+}
+h3 {
+	font-family:Arial,Helvetica,sans-serif;
+	color:#0D357B;
+	font-size:20px;
+	padding-bottom:10px;
+}
+h4 {
+	font-family:Arial,Helvetica,sans-serif;
+	padding-bottom:10px;
+	font-size:15px;
+	color:#0C3A85;
+}
+h5 {
+	padding-bottom:10px;
+	font-size:13px;
+	color:#666666;
+}
 </style>
 <!-- CHANGE for site header and code -->
 		<ul id="menu">
