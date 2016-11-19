@@ -95,6 +95,21 @@ li {
 		-webkit-transform: rotate(45deg);
 		transform: rotate(45deg);
 	}
+body {
+	margin:0px auto;
+	padding:0;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	color:#333;
+	background:#fff url('images/body-bg.jpg') repeat-x;
+}
+* {
+	margin:0;
+	padding:0;
+}
+
+
+/** element defaults **/
 table {
 	width:100%;
 	font-family:Arial, Helvetica, sans-serif;
@@ -130,7 +145,49 @@ p {
 a {
 	color:#0D3C84;
 }
-	h1 {
+a:hover {
+	color:#0C3A85;
+}
+a:focus {
+	outline:none;
+}
+fieldset {
+	display:block;
+	border:none;
+	border-top:1px solid #e0e0e0;
+}
+fieldset legend {
+	font-weight:bold;
+	font-size:13px;
+	padding-right:10px;
+	color:#222;
+}
+fieldset form {
+	padding-top:15px;
+}
+fieldset p label {
+	float:left;
+	width:150px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+fieldset form input, fieldset form select, fieldset form textarea {
+	padding:5px;
+	color:#333333;
+	font-size:13px;
+	font-family:Arial, Helvetica, sans-serif;
+	border:1px solid #ddd;
+}
+fieldset form input.formbutton {
+	margin-left:150px;
+	background:#0C3A87;
+	border:none;
+	border-bottom:3px solid #082659;
+	color:#ffffff;
+	font-weight:bold;
+	padding:5px 10px;
+	font-size:13px;
+}
+h1 {
 	font-size:45px;
 	font-family:Arial, Helvetica, sans-serif;
 }
@@ -159,6 +216,61 @@ h5 {
 	padding-bottom:10px;
 	font-size:13px;
 	color:#666666;
+}
+ul, ol {
+	margin:0 0 35px 35px;
+}
+li {
+	padding-bottom:5px;
+}
+
+
+/** wrapper **/
+div#wrapper {
+	width:920px;
+	margin:0px auto;
+	padding:0;
+}
+
+
+/** sitename **/
+div#sitename h1 {
+	font-size:48px;
+	letter-spacing:-5px;
+	margin:0;
+	height:82px;
+	padding:18px 0 0;
+}
+div#sitename h1 a,
+div#sitename h1 a:hover {
+	color:#fff;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+/** header **/
+div#header {
+	padding:50px 0 40px;
+	margin:0 auto;
+	height:111px;
+	background:transparent url('images/header-bg.jpg') no-repeat;
+}
+div#header h2 {
+	color:#ffffff;
+	padding-bottom:0;
+	font-weight:normal;
+	font-family:'Lucida Grande','Lucida Sans Unicode',Geneva,Verdana,Sans-Serif;
+	font-size:32px;
+	letter-spacing:0;
+}
+div#header div.tagline {
+	color:#C2D7F9;
+	font-size:14px;
+	padding-bottom:10px;
+	font-family:Arial,Helvetica,sans-serif;
+}
+div#header div.tagline a {
+	color:#ffffff;
 }
 </style>
 <!-- CHANGE for site header and code -->
