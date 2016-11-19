@@ -1,279 +1,107 @@
 <style>
-/**
- * Skyrim-inspired Menu
- */
-
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
-
-html {
-	
-	min-height: 100%;
-	font-family: "Open Sans", sans-serif;
-	font-weight: 300;
-	color: #FFF;
-}
-
-body, html {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-a {
-	color: rgba(255, 255, 255, 0.6);
-	text-decoration: none;
-}
-
-	a:hover, li:hover > a {
-		color: #FFF;
-	}
-
-ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-li {
-	margin: 0;
-	padding: 0;
-}
-
-#menu {
-	border-left: 1px solid #FFF;
-	border-right: 1px solid #FFF;
-	background: rgba(0, 0, 0, 0.5);
-	float: left;
-	font-size: 1.5em;
-	min-height: 100%;
-	margin-left: 1em;
-}
-
-#menu li {
-	position: relative;
-	z-index: 1;
-}
-
-#menu li a {
-	display: block;
-	padding: 0.5em 1em;
-	white-space: nowrap;
-}
-
-	#menu li ul {
-		position: absolute;
-		overflow: hidden;
-		display: none;
-		left: 100%;
-		top: 0.5em;
-		float: none;
-		background-image: -moz-radial-gradient(0 50%, ellipse  farthest-side, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.5) 33%, rgba(0,0,0,0) 100%);
-		background-image: -webkit-radial-gradient(0 50%, ellipse  farthest-side, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.5) 33%, rgba(0,0,0,0) 100%);
-		background-image: radial-gradient(0 50%, ellipse  farthest-side, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.5) 33%, rgba(0,0,0,0) 100%);
-	}
-	
-	#menu li:hover ul {
-		display: block;
-	}
-	
-	#menu li ul a {
-		position: relative;
-		font-size: 0.8em;
-	}
-	
-	#menu li ul a:hover:before {
-		content: "";
-		display: block;
-		width: 1em;
-		height: 1em;
-		background: rgba(0,0,0,0.75);
-		border: 1px solid #FFF;
-		position: absolute;
-		top: 0.5em;
-		left: -0.75em;
-		-moz-transform: rotate(45deg);
-		-webkit-transform: rotate(45deg);
-		transform: rotate(45deg);
-	}
+/* Define the body style */
 body {
-	margin:0px auto;
-	padding:0;
-	font-family:Verdana, Geneva, sans-serif;
-	font-size:12px;
-	color:#333;
-	background:#fff url('images/body-bg.jpg') repeat-x;
-}
-* {
-	margin:0;
-	padding:0;
+    font-family:Arial;
+    font-size:12px;
 }
 
-
-/** element defaults **/
-table {
-	width:100%;
-	font-family:Arial, Helvetica, sans-serif;
-	text-align:left;
-}
-th, td {
-	padding:5px 10px;
-}
-th {
-	color:#fff;
-	border-top:3px solid #082659;
-	background-color:#0C3A87;
-}
-td {
-	border-bottom:1px solid #f4f4f4;
-}
-code, blockquote {
-	display:block;
-	border-left:5px solid #ddd;
-	padding:10px;
-	margin-bottom:20px;
-}
-blockquote p {
-	font-style:italic;
-	font-family:Georgia, "Times New Roman", Times, serif;
-	margin:0;
-	height: 1%;
-}
-p {
-	line-height:1.9em;
-	margin-bottom:20px;
-}
-a {
-	color:#0D3C84;
-}
-a:hover {
-	color:#0C3A85;
-}
-a:focus {
-	outline:none;
-}
-fieldset {
-	display:block;
-	border:none;
-	border-top:1px solid #e0e0e0;
-}
-fieldset legend {
-	font-weight:bold;
-	font-size:13px;
-	padding-right:10px;
-	color:#222;
-}
-fieldset form {
-	padding-top:15px;
-}
-fieldset p label {
-	float:left;
-	width:150px;
-	font-family:Arial, Helvetica, sans-serif;
-}
-fieldset form input, fieldset form select, fieldset form textarea {
-	padding:5px;
-	color:#333333;
-	font-size:13px;
-	font-family:Arial, Helvetica, sans-serif;
-	border:1px solid #ddd;
-}
-fieldset form input.formbutton {
-	margin-left:150px;
-	background:#0C3A87;
-	border:none;
-	border-bottom:3px solid #082659;
-	color:#ffffff;
-	font-weight:bold;
-	padding:5px 10px;
-	font-size:13px;
-}
-h1 {
-	font-size:45px;
-	font-family:Arial, Helvetica, sans-serif;
-}
-h2 {
-	color:#061C41;
-	font-family:Arial,Helvetica,sans-serif;
-	font-size:30px;
-	font-weight:bold;
-	letter-spacing:-2px;
-	padding:0 0 5px;
-	margin:0;
-}
-h3 {
-	font-family:Arial,Helvetica,sans-serif;
-	color:#0D357B;
-	font-size:20px;
-	padding-bottom:10px;
-}
-h4 {
-	font-family:Arial,Helvetica,sans-serif;
-	padding-bottom:10px;
-	font-size:15px;
-	color:#0C3A85;
-}
-h5 {
-	padding-bottom:10px;
-	font-size:13px;
-	color:#666666;
-}
-ul, ol {
-	margin:0 0 35px 35px;
-}
-li {
-	padding-bottom:5px;
+/* We remove the margin, padding, and list style of UL and LI components */
+#menuwrapper ul, #menuwrapper ul li{
+    margin:0;
+    padding:0;
+    list-style:none;
 }
 
-
-/** wrapper **/
-div#wrapper {
-	width:920px;
-	margin:0px auto;
-	padding:0;
+/* We apply background color and border bottom white and width to 150px */
+#menuwrapper ul li{
+    background-color:#7f95db;
+    border-bottom:solid 1px white;
+    width:150px;
+    cursor:pointer;
 }
 
-
-/** sitename **/
-div#sitename h1 {
-	font-size:48px;
-	letter-spacing:-5px;
-	margin:0;
-	height:82px;
-	padding:18px 0 0;
-}
-div#sitename h1 a,
-div#sitename h1 a:hover {
-	color:#fff;
-	font-weight:normal;
-	text-decoration:none;
+/* We apply the background hover color when user hover the mouse over of the li component */
+#menuwrapper ul li:hover{
+    background-color:#6679e9;
+    position:relative;
 }
 
-/** header **/
-div#header {
-	padding:50px 0 40px;
-	margin:0 auto;
-	height:111px;
-	background:transparent url('images/header-bg.jpg') no-repeat;
+/* We apply the link style */
+#menuwrapper ul li a{
+    padding:5px 15px;
+    color:#ffffff;
+    display:inline-block;
+    text-decoration:none;
 }
-div#header h2 {
-	color:#ffffff;
-	padding-bottom:0;
-	font-weight:normal;
-	font-family:'Lucida Grande','Lucida Sans Unicode',Geneva,Verdana,Sans-Serif;
-	font-size:32px;
-	letter-spacing:0;
+
+/**** SECOND LEVEL MENU ****/
+/* We make the position to absolute for flyout menu and hidden the ul until the user hover the parent li item */
+#menuwrapper ul li ul{
+    position:absolute;
+    display:none;
 }
-div#header div.tagline {
-	color:#C2D7F9;
-	font-size:14px;
-	padding-bottom:10px;
-	font-family:Arial,Helvetica,sans-serif;
+
+/* When user has hovered the li item, we show the ul list by applying display:block, note: 150px is the individual menu width.  */
+#menuwrapper ul li:hover ul{
+    left:150px;
+    top:0px;
+    display:block;
 }
-div#header div.tagline a {
-	color:#ffffff;
+
+/* we apply different background color to 2nd level menu items*/
+#menuwrapper ul li ul li{
+    background-color:#cae25a;
+}
+
+/* We change the background color for the level 2 submenu when hovering the menu */
+#menuwrapper ul li:hover ul li:hover{
+    background-color:#b1b536;
+}
+
+/* We style the color of level 2 links */
+#menuwrapper ul li ul li a{
+    color:#454444;
+    display:inline-block;
+    width:120px;
+}
+
+/**** THIRD LEVEL MENU ****/
+/* We need to hide the 3rd menu, when hovering the first level menu */
+#menuwrapper ul li:hover ul li ul{
+    position:absolute;
+    display:none;
+}
+
+/* We show the third level menu only when they hover the second level menu parent */
+#menuwrapper ul li:hover ul li:hover ul{
+    display:block;
+    left:150px;
+    top:0;
+}
+
+/* We change the background color for the level 3 submenu*/
+#menuwrapper ul li:hover ul li:hover ul li{
+    background:#86d3fa;
+}
+
+/* We change the background color for the level 3 submenu when hovering the menu */
+
+#menuwrapper ul li:hover ul li:hover ul li:hover{
+    background:#358ebc;
+}
+
+/* We change the level 3 link color */
+#menuwrapper ul li:hover ul li:hover ul li a{
+    color:#ffffff;
+}
+
+/* Clear float */
+.clear{
+    clear:both;
 }
 </style>
 <!-- CHANGE for site header and code -->
+<div id="menuwrapper">
 		<ul id="menu">
 		<li>
 		<a href="#">Bot Analytics</a>
@@ -310,6 +138,7 @@ div#header div.tagline a {
 		</ul>
 	<li>
 </ul>
+</div>
 		<!--<div id="body" class="clear">
 			<div id="sidebar" class="column-left">
 			<ul>
