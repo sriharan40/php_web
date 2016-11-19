@@ -1,188 +1,139 @@
 <style>
-*{
-	/* A universal CSS reset */
-	margin:0;
-	padding:0;
+/**
+ * Skyrim-inspired Menu
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+html {
+	background: #333 url(http://subtlepatterns.com/patterns/tex2res4.png) 0 0 repeat;
+	min-height: 100%;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 300;
+	color: #FFF;
 }
 
-body{
-	font-size:14px;
-	color:#666;
-	background:#111 no-repeat;
+body, html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: rgba(255, 255, 255, 0.6);
+	text-decoration: none;
+}
+
+	a:hover, li:hover > a {
+		color: #FFF;
+	}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	margin: 0;
+	padding: 0;
+}
+
+#menu {
+	border-left: 1px solid #FFF;
+	border-right: 1px solid #FFF;
+	background: rgba(0, 0, 0, 0.5);
+	float: left;
+	font-size: 1.5em;
+	min-height: 100%;
+	margin-left: 1em;
+}
+
+#menu li {
+	position: relative;
+	z-index: 1;
+}
+
+#menu li a {
+	display: block;
+	padding: 0.5em 1em;
+	white-space: nowrap;
+}
+
+	#menu li ul {
+		position: absolute;
+		overflow: hidden;
+		display: none;
+		left: 100%;
+		top: 0.5em;
+		float: none;
+		background-image: -moz-radial-gradient(0 50%, ellipse  farthest-side, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.5) 33%, rgba(0,0,0,0) 100%);
+		background-image: -webkit-radial-gradient(0 50%, ellipse  farthest-side, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.5) 33%, rgba(0,0,0,0) 100%);
+		background-image: radial-gradient(0 50%, ellipse  farthest-side, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.5) 33%, rgba(0,0,0,0) 100%);
+	}
 	
-	/* CSS3 Radial Gradients */
-	background-image:-moz-radial-gradient(center -100px 45deg, circle farthest-corner, #444 150px, #111 300px);
-	background-image:-webkit-gradient(radial, 50% 0, 150, 50% 0, 300, from(#444), to(#111));
+	#menu li:hover ul {
+		display: block;
+	}
 	
-	font-family:Arial, Helvetica, sans-serif;
-}
-
-#navigationMenu li{
-	list-style:none;
-	height:39px;
-	padding:2px;
-	width:40px;
-}
-
-#navigationMenu span{
-	/* Container properties */
-	width:0;
-	left:38px;
-	padding:0;
-	position:absolute;
-	overflow:hidden;
-
-	/* Text properties */
-	font-family:'Myriad Pro',Arial, Helvetica, sans-serif;
-	font-size:18px;
-	font-weight:bold;
-	letter-spacing:0.6px;
-	white-space:nowrap;
-	line-height:39px;
+	#menu li ul a {
+		position: relative;
+		font-size: 0.8em;
+	}
 	
-	/* CSS3 Transition: */
-	-webkit-transition: 0.25s;
-	
-	/* Future proofing (these do not work yet): */
-	-moz-transition: 0.25s;
-	transition: 0.25s;
-}
-
-#navigationMenu a{
-	background:url('img/navigation.jpg') no-repeat;
-
-	height:39px;
-	width:38px;
-	display:block;
-	position:relative;
-}
-
-/* General hover styles */
-
-#navigationMenu a:hover span{ width:auto; padding:0 20px;overflow:visible; }
-#navigationMenu a:hover{
-	text-decoration:none;
-	
-	/* CSS outer glow with the box-shadow property */
-	-moz-box-shadow:0 0 5px #9ddff5;
-	-webkit-box-shadow:0 0 5px #9ddff5;
-	box-shadow:0 0 5px #9ddff5;
-}
-
-/* Green Button */
-
-#navigationMenu .home {	background-position:0 0;}
-#navigationMenu .home:hover {	background-position:0 -39px;}
-#navigationMenu .home span{
-	background-color:#7da315;
-	color:#3d4f0c;
-	text-shadow:1px 1px 0 #99bf31;
-}
-
-/* Blue Button */
-
-#navigationMenu .about { background-position:-38px 0;}
-#navigationMenu .about:hover { background-position:-38px -39px;}
-#navigationMenu .about span{
-	background-color:#1e8bb4;
-	color:#223a44;
-	text-shadow:1px 1px 0 #44a8d0;
-}
-
-/* Orange Button */
-
-#navigationMenu .services { background-position:-76px 0;}
-#navigationMenu .services:hover { background-position:-76px -39px;}
-#navigationMenu .services span{
-	background-color:#c86c1f;
-	color:#5a3517;
-	text-shadow:1px 1px 0 #d28344;
-}
-
-/* Yellow Button */
-
-#navigationMenu .portfolio { background-position:-114px 0;}
-#navigationMenu .portfolio:hover{ background-position:-114px -39px;}
-#navigationMenu .portfolio span{
-	background-color:#d0a525;
-	color:#604e18;
-	text-shadow:1px 1px 0 #d8b54b;
-}
-
-/* Purple Button */
-
-#navigationMenu .contact { background-position:-152px 0;}
-#navigationMenu .contact:hover { background-position:-152px -39px;}
-#navigationMenu .contact span{
-	background-color:#af1e83;
-	color:#460f35;
-	text-shadow:1px 1px 0 #d244a6;
-}
-
-/* The styles below are only needed for the demo page */
-
-#main{
-	margin:80px auto;
-	position:relative;
-	width:40px;
-}
-
-
-h1{
-	color:#fff;
-	font-size:30px;
-	font-weight:normal;
-	padding:60px 0 20px;
-	text-align:center;
-}
-
-h2{
-	font-weight:normal;
-	text-align:center;
-}
-
-h1,h2{
-	font-family:"Myriad Pro",Arial,Helvetica,sans-serif;
-}
-
-a, a:visited,a:active {
-	color:#0196e3;
-	text-decoration:none;
-	outline:none;
-}
-
-a:hover{
-	text-decoration:underline;
-}
-
-a img{
-	border:none;
-}
-
-p.note{
-	color:#707070;
-	font-size:10px;
-	text-align:center;
-	margin:50px;
-}
+	#menu li ul a:hover:before {
+		content: "";
+		display: block;
+		width: 1em;
+		height: 1em;
+		background: rgba(0,0,0,0.75);
+		border: 1px solid #FFF;
+		position: absolute;
+		top: 0.5em;
+		left: -0.75em;
+		-moz-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
 </style>
 <!-- CHANGE for site header and code -->
-		<ul id="navigationMenu">
+		<ul id="menu">
+		<li>
+		<a href="#">Bot Analytics</a>
+		<ul>
 			<li>
-	   		 <a class="home" href="#">
-            		<span>Home</span>
-        		</a>
-    			</li>
-			<li>
-	   		 <a class="home2" href="#">
-            		<span>Home</span>
-        		</a>
-    			</li>
-
-
+				<li><a href="https://www.dashbot.io/login">Dashbot Analytics</a>         
+			</li>
+			
 		</ul>
-
-<!--<div id="body" class="clear">
+	<li>
+	<li>
+		<a href="#">Training Bot</a>
+		<ul>
+			<li>
+				<a href="https://console.api.ai/api-client/#/login">API.AI</a>
+			</li>
+			
+		</ul>
+	<li>
+	<li>
+		<a href="#">Business Cases</a>
+		<ul>
+			 <li><a href="index.php">Top Selling Offers</a></li>
+			 <li><a href="fb_campaign.php">Broadcast to FB users</a></li>
+		</ul>
+	<li>
+	<li>
+		<a href="#">Controls</a>
+		<ul>
+			<li>
+				<a href="logout.php">Sign Out</a>
+			</li>
+			
+		</ul>
+	<li>
+</ul>
+		<!--<div id="body" class="clear">
 			<div id="sidebar" class="column-left">
 			<ul>
                 	<li>
