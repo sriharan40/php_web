@@ -6,7 +6,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 
 html {
-	background: #333 url(http://subtlepatterns.com/patterns/tex2res4.png) 0 0 repeat;
+	
 	min-height: 100%;
 	font-family: "Open Sans", sans-serif;
 	font-weight: 300;
@@ -95,6 +95,22 @@ li {
 		-webkit-transform: rotate(45deg);
 		transform: rotate(45deg);
 	}
+table {
+	width:100%;
+	font-family:Arial, Helvetica, sans-serif;
+	text-align:left;
+}
+th, td {
+	padding:5px 10px;
+}
+th {
+	color:#fff;
+	border-top:3px solid #082659;
+	background-color:#0C3A87;
+}
+td {
+	border-bottom:1px solid #f4f4f4;
+}
 </style>
 <!-- CHANGE for site header and code -->
 		<ul id="menu">
