@@ -300,17 +300,37 @@ div#footer p a {
 }
 
 </style>
-<ul class=sidebar><h3>Bot Performance and Analytics</h3>
-<li><a href="https://www.dashbot.io/login" target="blank">Dashbot Analytics</a></li>
-    </ul>
+<!-- CHANGE for site header and code -->
+<div id="body" class="clear">
+			<div id="sidebar" class="column-left">
+			<ul>
+                	<li>
+			<h4>Bot Performance and Analytics</h4>
+                        <ul class="blocklist">
+                            <li><a href="https://www.dashbot.io/login">Dashbot Analytics</a></li>                            
+                        </ul>
+			</li>
+			<li>
+			<h4>Bot Training</h4>
+                        <ul class="blocklist">
+                            <li><a href="https://console.api.ai/api-client/#/login">API.AI</a></li>
+                           </ul>
+			</li>
+			<li>
+			<h4>Business Usecases</h4>
+                        <ul class="blocklist">
+                            <li><a href="index.php">Top Selling Offers</a></li>
+			    <li><a href="index.php">Broadcast to FB users</a></li>
+                           </ul>
+			</li>
+			<li>
+			<h4>Session Controls</h4>
+                        <ul class="blocklist">
+                            <li><a href="logout.php">Sign Out</a></li>
+			                    </ul>
+			</li>
+			</ul>
+			</div>
 
-<ul class=sidebar><h3>Bot Training</h3>
-<li><a href="https://console.api.ai/api-client/#/login">API AI</a></li>
-    </ul>
-<ul class=sidebar><h3>Business Cases</h3>
-<li><a href="index.php">Top Selling Offers</a></li>
-<li><a href="index.php">Broadcast to FB users</a></li>
-</ul>
+<!-- CHANGE ENDS here -->
 
-<br /><br />
-<h4><u class=sidebar><a href="logout.php">Logout</a></u></h4>
