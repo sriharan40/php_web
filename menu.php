@@ -149,29 +149,13 @@ ul li:hover .dropOut { opacity: 1; margin-top: 8px; }
 					<div class="dropOut">
 						<div class="triangle"></div>
 						<ul>
-							<li>API.AI<a href="https://console.api.ai/api-client/#/login"></a></li>
+							<a href="https://console.api.ai/api-client/#/login"></a>
+							<li>API.AI</li>
 						</ul>
 					</div>
 				</div>
 			
 			</li>
-			<li class="drop">
-				<a href="#">You</a>
-				
-				<div class="dropdownContain">
-					<div class="dropOut">
-						<div class="triangle"></div>
-						<ul>
-							<li>Plan</li>
-							<li>Account Settings</li>
-							<li>Switch Account</li>
-							<li>Sign Out</li>
-						</ul>
-					</div>
-				</div>
-			
-			</li>
-
 			<li class="drop">
 				<a href="#">Business Use Cases</a>
 				
@@ -179,8 +163,10 @@ ul li:hover .dropOut { opacity: 1; margin-top: 8px; }
 					<div class="dropOut">
 						<div class="triangle"></div>
 						<ul>
-							<li><a href="index.php">Top Selling Offers</a></li>
-			    				<li><a href="fb_campaign.php">Broadcast to FB users</a></li>                            
+							<a href="index.php"></a>
+							<li>Top Selling Offers</li>
+							<a href="fb_campaign.php"></a>
+			    				<li>Broadcast to FB users</li>                            
 						</ul>
 					</div>
 				</div>
@@ -193,7 +179,8 @@ ul li:hover .dropOut { opacity: 1; margin-top: 8px; }
 					<div class="dropOut">
 						<div class="triangle"></div>
 						<ul>
-							<li><a href="logout.php">SignOut</a></li>
+							<a href="logout.php"></a>
+							<li>SignOut</li>
 			    				
 						</ul>
 					</div>
