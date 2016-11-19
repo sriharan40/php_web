@@ -2,11 +2,13 @@
 session_start();
 ?>
 <html>
+
 <title>Top Offers List</title>
 <body style="margin:0 auto;">
 <style>
 
 </style>
+	<div class="site-wrap">
 <?php
 error_reporting(0);
 
@@ -70,11 +72,13 @@ echo '<td>&nbsp;&nbsp; <a href="index.php?id='.$child1["id"].'">Delete</a></td>'
 ?>
 
 </tr>
+	
 <?php
 }
 
 }
 ?>
 </table>
+</div>
 </body>
 </html>
