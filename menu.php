@@ -1,191 +1,187 @@
 <style>
-html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td {margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;vertical-align: baseline;background: transparent;}body {line-height: 1;}ol, ul {list-style: none;}blockquote, q {quotes: none;}blockquote:before, blockquote:after,q:before, q:after {content: '';content: none;} /* remember to define focus styles! */ :focus {outline: 0;} /* remember to highlight inserts somehow! */ins {text-decoration: none;}del {text-decoration: line-through;} /* tables still need 'cellspacing="0"' in the markup */ table {border-collapse: collapse;border-spacing: 0;}
-
-
-/*---------- BODY --------------------------------*/
-
-body {
-	text-align: center;
-	background: #e0e0e0;
-	padding-bottom: 200px;
+*{
+	/* A universal CSS reset */
+	margin:0;
+	padding:0;
 }
 
-a {
-	text-decoration: none;
+body{
+	font-size:14px;
+	color:#666;
+	background:#111 no-repeat;
+	
+	/* CSS3 Radial Gradients */
+	background-image:-moz-radial-gradient(center -100px 45deg, circle farthest-corner, #444 150px, #111 300px);
+	background-image:-webkit-gradient(radial, 50% 0, 150, 50% 0, 300, from(#444), to(#111));
+	
+	font-family:Arial, Helvetica, sans-serif;
 }
 
-/*---------- Wrapper --------------------*/
-
-nav {
-	width: 100%;
-	height: 80px;
-	background: #222;
+#navigationMenu li{
+	list-style:none;
+	height:39px;
+	padding:2px;
+	width:40px;
 }
 
-ul {
-	text-align: center;
+#navigationMenu span{
+	/* Container properties */
+	width:0;
+	left:38px;
+	padding:0;
+	position:absolute;
+	overflow:hidden;
+
+	/* Text properties */
+	font-family:'Myriad Pro',Arial, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	letter-spacing:0.6px;
+	white-space:nowrap;
+	line-height:39px;
+	
+	/* CSS3 Transition: */
+	-webkit-transition: 0.25s;
+	
+	/* Future proofing (these do not work yet): */
+	-moz-transition: 0.25s;
+	transition: 0.25s;
 }
 
-ul li {
-	font: 13px Verdana, 'Lucida Grande';
-	cursor: pointer;
-	-webkit-transition: padding .05s linear;
-	-moz-transition: padding .05s linear;
-	-ms-transition: padding .05s linear;
-	-o-transition: padding .05s linear;
-	transition: padding .05s linear;
-}
-ul li.drop {
-	position: relative;
-}
-ul > li {
-	display: inline-block;
-}
-ul li a {
-	line-height: 80px;
-	padding: 0 20px;
-	height: 80px;
-	color: #777;
-	-webkit-transition: all .1s ease-out;
-	-moz-transition: all .1s ease-out;
-	-ms-transition: all .1s ease-out;
-	-o-transition: all .1s ease-out;
-	transition: all .1s ease-out;
-}
-ul li a:hover {
-	color: #eee;
+#navigationMenu a{
+	background:url('img/navigation.jpg') no-repeat;
+
+	height:39px;
+	width:38px;
+	display:block;
+	position:relative;
 }
 
-.dropOut .triangle {
-	width: 0;
-	height: 0;
-	position: absolute;
-	border-left: 8px solid transparent;
-	border-right: 8px solid transparent;
-	border-bottom: 8px solid white;
-	top: -8px;
-	left: 50%;
-	margin-left: -8px;
-}
-.dropdownContain {
-	width: 160px;
-	position: absolute;
-	z-index: 2;
-	left: 50%;
-	margin-left: -80px; /* half of width */
-	top: -400px;
-}
-.dropOut {
-	width: 160px;
-	background: white;
-	float: left;
-	position: relative;
-	margin-top: 0px;
-	opacity: 0;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	-webkit-box-shadow: 0 1px 6px rgba(0,0,0,.15);
-	-moz-box-shadow: 0 1px 6px rgba(0,0,0,.15);
-	box-shadow: 0 1px 6px rgba(0,0,0,.15);
-	-webkit-transition: all .1s ease-out;
-	-moz-transition: all .1s ease-out;
-	-ms-transition: all .1s ease-out;
-	-o-transition: all .1s ease-out;
-	transition: all .1s ease-out;
+/* General hover styles */
+
+#navigationMenu a:hover span{ width:auto; padding:0 20px;overflow:visible; }
+#navigationMenu a:hover{
+	text-decoration:none;
+	
+	/* CSS outer glow with the box-shadow property */
+	-moz-box-shadow:0 0 5px #9ddff5;
+	-webkit-box-shadow:0 0 5px #9ddff5;
+	box-shadow:0 0 5px #9ddff5;
 }
 
-.dropOut ul {
-	float: left;
-	padding: 10px 0;
-}
-.dropOut ul li {
-	text-align: left;
-	float: left;
-	width: 125px;
-	padding: 12px 0 10px 15px;
-	margin: 0px 10px;
-	color: #777;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	-webkit-transition: background .1s ease-out;
-	-moz-transition: background .1s ease-out;
-	-ms-transition: background .1s ease-out;
-	-o-transition: background .1s ease-out;
-	transition: background .1s ease-out;
+/* Green Button */
+
+#navigationMenu .home {	background-position:0 0;}
+#navigationMenu .home:hover {	background-position:0 -39px;}
+#navigationMenu .home span{
+	background-color:#7da315;
+	color:#3d4f0c;
+	text-shadow:1px 1px 0 #99bf31;
 }
 
-.dropOut ul li:hover {
-	background: #f6f6f6;
+/* Blue Button */
+
+#navigationMenu .about { background-position:-38px 0;}
+#navigationMenu .about:hover { background-position:-38px -39px;}
+#navigationMenu .about span{
+	background-color:#1e8bb4;
+	color:#223a44;
+	text-shadow:1px 1px 0 #44a8d0;
 }
 
-ul li:hover a { color: white; }
-ul li:hover .dropdownContain { top: 65px; }
-ul li:hover .underline { border-bottom-color: #777; }
-ul li:hover .dropOut { opacity: 1; margin-top: 8px; }
+/* Orange Button */
+
+#navigationMenu .services { background-position:-76px 0;}
+#navigationMenu .services:hover { background-position:-76px -39px;}
+#navigationMenu .services span{
+	background-color:#c86c1f;
+	color:#5a3517;
+	text-shadow:1px 1px 0 #d28344;
+}
+
+/* Yellow Button */
+
+#navigationMenu .portfolio { background-position:-114px 0;}
+#navigationMenu .portfolio:hover{ background-position:-114px -39px;}
+#navigationMenu .portfolio span{
+	background-color:#d0a525;
+	color:#604e18;
+	text-shadow:1px 1px 0 #d8b54b;
+}
+
+/* Purple Button */
+
+#navigationMenu .contact { background-position:-152px 0;}
+#navigationMenu .contact:hover { background-position:-152px -39px;}
+#navigationMenu .contact span{
+	background-color:#af1e83;
+	color:#460f35;
+	text-shadow:1px 1px 0 #d244a6;
+}
+
+/* The styles below are only needed for the demo page */
+
+#main{
+	margin:80px auto;
+	position:relative;
+	width:40px;
+}
+
+
+h1{
+	color:#fff;
+	font-size:30px;
+	font-weight:normal;
+	padding:60px 0 20px;
+	text-align:center;
+}
+
+h2{
+	font-weight:normal;
+	text-align:center;
+}
+
+h1,h2{
+	font-family:"Myriad Pro",Arial,Helvetica,sans-serif;
+}
+
+a, a:visited,a:active {
+	color:#0196e3;
+	text-decoration:none;
+	outline:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+a img{
+	border:none;
+}
+
+p.note{
+	color:#707070;
+	font-size:10px;
+	text-align:center;
+	margin:50px;
+}
 </style>
 <!-- CHANGE for site header and code -->
-<nav>
-		<ul>
-			<li class="drop">
-				<a href="#">Bot Performance and Analytics</a>
-				
-				<div class="dropdownContain">
-					<div class="dropOut">
-						<div class="triangle"></div>
-						<ul>
-							<a href="index.php">Analytics</a>
-						</ul>
-					</div>
-				</div>
-			
-			</li>
-			<li class="drop">
-				<a href="#">Bot Training</a>
-				
-				<div class="dropdownContain">
-					<div class="dropOut">
-						<div class="triangle"></div>
-						<li>
-							
-							<a href="https://console.api.ai/api-client/#/login">API.AI</a>
-							
-						</li>
-					</div>
-				</div>
-			
-			</li>
-			<li class="drop">
-				<a href="#">Business Use Cases</a>
-				
-				<div class="dropdownContain">
-					<div class="dropOut">
-						<div class="triangle"></div>
-						<ul>
-							<a href="index.php"> Top offers</a>
-							<a href="fb_campaign.php"> FB Notify</a>
-			    				</ul>
-					</div>
-				</div>
-			
-			</li>
-			<li class="drop">
-				<a href="#">Controls</a>
-				
-				<div class="dropdownContain">
-					<div class="dropOut">
-						<div class="triangle"></div>
-						<ul>
-							<a href="logout.php"> Signout</a>
-										    				
-						</ul>
-					</div>
-				</div>
-			
-			</li>
+		<ul id="navigationMenu">
+			<li>
+	   		 <a class="home" href="#">
+            		<span>Home</span>
+        		</a>
+    			</li>
+			<li>
+	   		 <a class="home2" href="#">
+            		<span>Home</span>
+        		</a>
+    			</li>
+
+
 		</ul>
-</nav>
+
 <!--<div id="body" class="clear">
 			<div id="sidebar" class="column-left">
 			<ul>
