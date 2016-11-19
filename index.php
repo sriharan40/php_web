@@ -43,7 +43,6 @@ $arr = json_decode($data, true);
 <?php
 include("menu.php");
 ?>
-<div id="content">
 <!--<div style="float:left; padding-left:20px;"-->
 <h3>Top Offers List</h3>
 <br/>
@@ -77,6 +76,5 @@ echo '<td>&nbsp;&nbsp; <a href="index.php?id='.$child1["id"].'">Delete</a></td>'
 }
 ?>
 </table>
-</div>
 </body>
 </html>
