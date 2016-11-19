@@ -8,7 +8,7 @@ session_start();
 <style>
 
 </style>
-	<div class="site-wrap">
+	
 <?php
 error_reporting(0);
 
@@ -79,6 +79,5 @@ echo '<td>&nbsp;&nbsp; <a href="index.php?id='.$child1["id"].'">Delete</a></td>'
 }
 ?>
 </table>
-</div>
 </body>
 </html>
