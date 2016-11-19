@@ -43,8 +43,8 @@ $arr = json_decode($data, true);
 <?php
 include("menu.php");
 ?>
-</div>
-<div style="float:left; padding-left:20px;">
+<div id="content" class="column-right">
+<!--<div style="float:left; padding-left:20px;"-->
 <h3><u>Top Offers List</u></h3>
 <br/>
 <a href="edit.php">Add New</a>
