@@ -429,24 +429,60 @@ div#footer p a {
 <!-- CHANGE for site header and code -->
 <nav>
 		<ul>
-			<li><a href="#">Bot Performance and Analytics</a></li>
 			<li class="drop">
-				<a href="https://www.dashbot.io/login">Dashbot</a>
+				<a href="#">Bot Performance and Analytics</a>
 				
 				<div class="dropdownContain">
 					<div class="dropOut">
 						<div class="triangle"></div>
 						<ul>
-							<li>Plan</li>
-							<li>Account Settings</li>
-							<li>Switch Account</li>
-							<li>Sign Out</li>
+							<li><a href="https://www.dashbot.io/login">Dashbot Analytics</a></li>                            
 						</ul>
 					</div>
 				</div>
 			
 			</li>
-			<li><a href="#">Help</a></li>
+			<li class="drop">
+				<a href="#">Bot Training</a>
+				
+				<div class="dropdownContain">
+					<div class="dropOut">
+						<div class="triangle"></div>
+						<ul>
+							<li><a href="https://console.api.ai/api-client/#/login">API.AI</a></li>
+						</ul>
+					</div>
+				</div>
+			
+			</li>
+			<li class="drop">
+				<a href="#">Business Use Cases</a>
+				
+				<div class="dropdownContain">
+					<div class="dropOut">
+						<div class="triangle"></div>
+						<ul>
+							<li><a href="index.php">Top Selling Offers</a></li>
+			    				<li><a href="fb_campaign.php">Broadcast to FB users</a></li>                            
+						</ul>
+					</div>
+				</div>
+			
+			</li>
+			<li class="drop">
+				<a href="#">Controls</a>
+				
+				<div class="dropdownContain">
+					<div class="dropOut">
+						<div class="triangle"></div>
+						<ul>
+							<li><a href="logout.php">SignOut</a></li>
+			    				
+						</ul>
+					</div>
+				</div>
+			
+			</li>
 		</ul>
 </nav>
 <!--<div id="body" class="clear">
