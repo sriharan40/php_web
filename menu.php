@@ -300,17 +300,17 @@ div#footer p a {
 }
 
 </style>
-<ul><h3>Bot Performance and Analytics</h3>
+<ul class=sidebar><h3>Bot Performance and Analytics</h3>
 <li><a href="https://www.dashbot.io/login" target="blank">Dashbot Analytics</a></li>
-    </ol></ul>
+    </ul>
 
-<ul><h3>Bot Training</h3>
+<ul class=sidebar><h3>Bot Training</h3>
 <li><a href="https://console.api.ai/api-client/#/login">API AI</a></li>
     </ul>
-<ul><h3>Business Cases</h3>
+<ul class=sidebar><h3>Business Cases</h3>
 <li><a href="index.php">Top Selling Offers</a></li>
 <li><a href="index.php">Broadcast to FB users</a></li>
 </ul>
 
 <br /><br />
-<h4><u><a href="logout.php">Logout</a></u></h4>
+<h4><u class=sidebar><a href="logout.php">Logout</a></u></h4>
