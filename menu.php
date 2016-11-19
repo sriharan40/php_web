@@ -135,7 +135,8 @@ ul li:hover .dropOut { opacity: 1; margin-top: 8px; }
 					<div class="dropOut">
 						<div class="triangle"></div>
 						<ul>
-							<li><a href="https://www.dashbot.io/login">Analytics</a></li>                            
+							<li>Analytics</li>
+							<a href="index.php"></a>
 						</ul>
 					</div>
 				</div>
