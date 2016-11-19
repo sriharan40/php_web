@@ -8,32 +8,48 @@ session_start();
 error_reporting(0);
 if ($_SESSION['login'] == "")
 {
-	header("location:login.php");	
+header("location:login.php");	
 }
 include("menu.php");
 ?>
 <div id="content">
 <h3><u>Send Message</u></h3>
+<br />
 <?php
 $message = $_POST["message"];
 $option1 = $_POST["option1"];
 $option2 = $_POST["option2"];
 
 $message = str_replace(" ", "%20", $message);
+$message = str_replace("?", "%3F", $message);
 $option1 = str_replace(" ", "%20", $option1);
 $option2 = str_replace(" ", "%20", $option2);
 
 if($message && $option1 && $option2)
 {
-$url = 'https://hitman507bot.herokuapp.com/?sender=8050582590&message='.$message.'&options='.$option1.','.$option2.'';
+$url1 = "https://paypal-payout.herokuapp.com";
+$data = file_get_contents($url1);
+$arr = json_decode($data, true);
+foreach($arr as $child) {
+foreach($child as $child1) {
+$url = 'https://hitman507bot.herokuapp.com/?sender='.$child1["mobile"].'&message='.$message.'&options='.$option1.','.$option2.'';
 file_get_contents($url);	
+}
+}
 echo "Message sent successfully.";
 }
 
 else if($message)
 {
-$url = 'https://hitman507bot.herokuapp.com/?sender=8050582590&message='.$message.'';
+$url1 = "https://paypal-payout.herokuapp.com";
+$data = file_get_contents($url1);
+$arr = json_decode($data, true);
+foreach($arr as $child) {
+foreach($child as $child1) {	
+$url = 'https://hitman507bot.herokuapp.com/?sender='.$child1["mobile"].'&message='.$message.'';
 file_get_contents($url);	
+}
+}
 echo "Message sent successfully.";
 }	
 ?>
@@ -55,6 +71,8 @@ echo "Message sent successfully.";
 </tr>
 </tbody>
 </table>
+</div>
+<div style="clear:both;"></div>
 </div>
 </body>
 </html>
