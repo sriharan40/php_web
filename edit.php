@@ -32,5 +32,7 @@ include("menu.php");
 </tbody>
 </table>
 </div>
+<div style="clear:both;"></div>
+</div>
 </body>
 </html>
