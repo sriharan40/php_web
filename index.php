@@ -5,50 +5,7 @@ session_start();
 <title>Top Offers List</title>
 <body style="margin:0 auto;">
 <style>
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
-}
 
-li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration: none;
-}
-
-li a.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
-li a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-}
-ol li{	
-padding:5px;
-padding-left:0px;	
-}
-  table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-th, td {
-    text-align: left;
-    padding: 8px;
-}
-
-tr:nth-child(even){background-color: #f2f2f2}
-
-th {
-    background-color: #4CAF50;
-    color: white;
-}
 </style>
 <?php
 error_reporting(0);
@@ -82,7 +39,7 @@ file_get_contents($url);
 $data =  file_get_contents("https://paypal-payout.herokuapp.com/?offer=1");
 $arr = json_decode($data, true);
 ?>
-<div style="float:left; width:200px;  padding-left:20px; border-right:1px solid #333333; height:100%;">
+<!--<div style="float:left; width:200px;  padding-left:20px; border-right:1px solid #333333; height:100%;"> -->
 <?php
 include("menu.php");
 ?>
