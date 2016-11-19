@@ -189,6 +189,7 @@ div#body {
 /** content+sidebar styles **/
 div#content {
 	width:600px;
+	float:left;
 }
 div.column-left {
 	float:left;
