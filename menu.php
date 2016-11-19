@@ -155,6 +155,23 @@ ul li:hover .dropOut { opacity: 1; margin-top: 8px; }
 			
 			</li>
 			<li class="drop">
+				<a href="#">You</a>
+				
+				<div class="dropdownContain">
+					<div class="dropOut">
+						<div class="triangle"></div>
+						<ul>
+							<li>Plan</li>
+							<li>Account Settings</li>
+							<li>Switch Account</li>
+							<li>Sign Out</li>
+						</ul>
+					</div>
+				</div>
+			
+			</li>
+
+			<li class="drop">
 				<a href="#">Business Use Cases</a>
 				
 				<div class="dropdownContain">
