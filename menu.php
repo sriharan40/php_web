@@ -149,8 +149,8 @@ ul li:hover .dropOut { opacity: 1; margin-top: 8px; }
 					<div class="dropOut">
 						<div class="triangle"></div>
 						<ul>
-							<a href="https://console.api.ai/api-client/#/login"></a>
-							<li>API.AI</li>
+							<a href="https://console.api.ai/api-client/#/login">API.AI</a>
+							
 						</ul>
 					</div>
 				</div>
