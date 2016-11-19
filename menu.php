@@ -436,7 +436,7 @@ div#footer p a {
 					<div class="dropOut">
 						<div class="triangle"></div>
 						<ul>
-							<li><a href="https://www.dashbot.io/login">Dashbot Analytics</a></li>                            
+							<li>Dashbot Analytics<a href="https://www.dashbot.io/login">Dashbot Analytics</a></li>                            
 						</ul>
 					</div>
 				</div>
