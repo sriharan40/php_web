@@ -2,31 +2,21 @@
 session_start();
 ?>
 <html>
-
 <title>Top Offers List</title>
 <body style="margin:0 auto;">
 <style>
-
 </style>
-	
 <?php
 error_reporting(0);
-
 if ($_SESSION['login'] == "")
 {
 	header("location:login.php");	
 }
-
 $id = $_GET["id"];
-
 $offer_name = $_POST["offer_name"];
-
 $offer_name = str_replace(" ", "%20", $offer_name);
-
 $link = $_POST["link"];
-
 $link = str_replace(" ", "%20", $link);
-
 if($offer_name && $link)
 {
 $url = 'https://paypal-payout.herokuapp.com/?offer_name='.$offer_name.'&description='.$link.'';
@@ -40,17 +30,15 @@ file_get_contents($url);
 }
 $data =  file_get_contents("https://paypal-payout.herokuapp.com/?offer=1");
 $arr = json_decode($data, true);
-?>
-<div style="float:left; width:200px;  padding-left:20px; height:100%;"> -->
-<?php
+
 include("menu.php");
 ?>
-<!--<div style="float:left; padding-left:20px;"-->
+<div id="content">
 <h3>Top Offers List</h3>
 <br/>
 <a href="edit.php">Add New</a>
 <br/><br/>
-<table>
+<table cellspacing="0" cellpadding="10" border="1">
 <tr>
 <th>Offer Name</th>
 <th>Description / Link</th>
@@ -58,27 +46,23 @@ include("menu.php");
 </tr>
 <?php
 foreach($arr as $child) {
-
 foreach($child as $child1) {
 ?>
 <tr>
 <?php
 echo '<td>'.$child1["offer_name"].'</td>';
-
 echo '<td>'.$child1["description"].'</td>';
-
 echo '<td>&nbsp;&nbsp; <a href="index.php?id='.$child1["id"].'">Delete</a></td>';
-
 ?>
 
 </tr>
-	
 <?php
 }
-
 }
 ?>
 </table>
-	</div>
+</div>
+<div style="clear:both;"></div>
+</div>
 </body>
 </html>
