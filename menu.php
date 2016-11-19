@@ -120,7 +120,7 @@ ul li a:hover {
 	background: #f6f6f6;
 }
 
-ul li:hover a { color: #f6f6f6; }
+ul li:hover a { color: black; }
 ul li:hover .dropdownContain { top: 65px; }
 ul li:hover .underline { border-bottom-color: #777; }
 ul li:hover .dropOut { opacity: 1; margin-top: 8px; }
@@ -135,8 +135,7 @@ ul li:hover .dropOut { opacity: 1; margin-top: 8px; }
 					<div class="dropOut">
 						<div class="triangle"></div>
 						<ul>
-							<li>Analytics</li>
-							<a href="index.php"></a>
+							<a href="index.php">Analytics</a>
 						</ul>
 					</div>
 				</div>
@@ -163,11 +162,9 @@ ul li:hover .dropOut { opacity: 1; margin-top: 8px; }
 					<div class="dropOut">
 						<div class="triangle"></div>
 						<ul>
-							<a href="index.php"></a>
-							<li>Top Selling Offers</li>
-							<a href="fb_campaign.php"></a>
-			    				<li>Broadcast to FB users</li>                            
-						</ul>
+							<a href="index.php"> Top offers</a>
+							<a href="fb_campaign.php"> FB Notify</a>
+			    				</ul>
 					</div>
 				</div>
 			
@@ -179,9 +176,8 @@ ul li:hover .dropOut { opacity: 1; margin-top: 8px; }
 					<div class="dropOut">
 						<div class="triangle"></div>
 						<ul>
-							<a href="logout.php"></a>
-							<li>SignOut</li>
-			    				
+							<a href="logout.php"> Signout</a>
+										    				
 						</ul>
 					</div>
 				</div>
