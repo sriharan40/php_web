@@ -45,15 +45,16 @@ include("menu.php");
 ?>
 <div id="content" class="column-right">
 <!--<div style="float:left; padding-left:20px;"-->
-<h3><u>Top Offers List</u></h3>
+<h3>Top Offers List</h3>
 <br/>
 <a href="edit.php">Add New</a>
 <br/><br/>
-<table cellspacing="0" cellpadding="10" border="1">
-<tbody>
+<table>
+<tr>
 <th>Offer Name</th>
 <th>Description / Link</th>
 <th>Action</th>
+</tr>
 <?php
 foreach($arr as $child) {
 
@@ -75,7 +76,6 @@ echo '<td>&nbsp;&nbsp; <a href="index.php?id='.$child1["id"].'">Delete</a></td>'
 
 }
 ?>
-</tbody>
 </table>
 </div>
 </body>
