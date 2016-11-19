@@ -41,7 +41,7 @@ file_get_contents($url);
 $data =  file_get_contents("https://paypal-payout.herokuapp.com/?offer=1");
 $arr = json_decode($data, true);
 ?>
-<!--<div style="float:left; width:200px;  padding-left:20px; border-right:1px solid #333333; height:100%;"> -->
+<div style="float:left; width:200px;  padding-left:20px; height:100%;"> -->
 <?php
 include("menu.php");
 ?>
@@ -79,5 +79,6 @@ echo '<td>&nbsp;&nbsp; <a href="index.php?id='.$child1["id"].'">Delete</a></td>'
 }
 ?>
 </table>
+	</div>
 </body>
 </html>
