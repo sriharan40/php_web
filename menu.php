@@ -120,7 +120,7 @@ ul li a:hover {
 	background: #f6f6f6;
 }
 
-ul li:hover a { color: white; }
+ul li:hover a { color: #f6f6f6; }
 ul li:hover .dropdownContain { top: 65px; }
 ul li:hover .underline { border-bottom-color: #777; }
 ul li:hover .dropOut { opacity: 1; margin-top: 8px; }
