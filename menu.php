@@ -38,4 +38,8 @@ li a:hover:not(.active) {
 <li><a href="index.php">Top Selling Offers</a></li>
 <li><a href="index.php">Broadcast to FB users</a></li>
     </ol></ul>
+
+<iframe width="350" height="430" src="https://console.api.ai/api-client/demo/embedded/44b8113a-9d4f-4ad3-b71d-feee91c13b3e"></iframe>
+
+<br /><br />
 <h4><u><a href="logout.php">Logout</a></u></h4>
