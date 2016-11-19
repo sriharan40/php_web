@@ -320,7 +320,7 @@ div#footer p a {
 			<h4>Business Usecases</h4>
                         <ul class="blocklist">
                             <li><a href="index.php">Top Selling Offers</a></li>
-			    <li><a href="index.php">Broadcast to FB users</a></li>
+			    <li><a href="fb_campaign.php">Broadcast to FB users</a></li>
                            </ul>
 			</li>
 			<li>
