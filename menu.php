@@ -120,7 +120,7 @@ ul li a:hover {
 	background: #f6f6f6;
 }
 
-ul li:hover a { color: black; }
+ul li:hover a { color: white; }
 ul li:hover .dropdownContain { top: 65px; }
 ul li:hover .underline { border-bottom-color: #777; }
 ul li:hover .dropOut { opacity: 1; margin-top: 8px; }
@@ -147,10 +147,11 @@ ul li:hover .dropOut { opacity: 1; margin-top: 8px; }
 				<div class="dropdownContain">
 					<div class="dropOut">
 						<div class="triangle"></div>
-						<ul>
+						<li>
+							
 							<a href="https://console.api.ai/api-client/#/login">API.AI</a>
 							
-						</ul>
+						</li>
 					</div>
 				</div>
 			
