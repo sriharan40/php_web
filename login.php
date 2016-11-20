@@ -6,6 +6,7 @@ session_start();
 <head>
 <title>Login</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <?php
@@ -39,24 +40,18 @@ $found="N";
 ?>
 <br /><br /><br /><br />
 <br /><br />
-<table width="100%" border="0" cellpadding="5" cellspacing="0">
-<tr>
-<td width="35%"></td>
-<td width="30%" style="border: 1px solid ##4CAF50; color: white; font-weight:bold;" bgcolor="##4CAF50" height="30"><div align="center" style="font-size:18px;" class="style1">Login</div></td>
-<td width="35%"></td>
-</tr>
+<form name="form1" method="post" action="login.php">
+<table border="0" bgcolor="#ffffff" cellpadding="8" cellspacing="10" style="width:300px !important; margin:0 auto; padding:10px; border-radius:15px;">
   <tr>
-    <td width="35%"></td>
-    <td width="20%" style="border: 1px solid #0080ff" valign="top">
-	<form name="form1" method="post" action="">
-      <table width="100%" cellpadding="8" cellspacing="8" border="0">
-        <tr>
+		<td align="center" colspan="2"><h2 style="text-align:center; margin-top:5px;">LOGIN</h2></td>
+		</tr>	
+	   <tr style="background-color:#ffffff;">
           <td><span class="style2">Username</span></td>
-          <td><input name="loginid" type="text" id="loginid2"></td>
+          <td><input name="loginid" placeholder="Username" type="text" id="loginid2"></td>
         </tr>
         <tr>
           <td><span class="style2">Password</span></td>
-          <td><input name="pass" type="password" id="pass2"></td>
+          <td><input name="pass" type="password" placeholder="Password" id="pass2"></td>
         </tr>
          <?php
 		  if(isset($found))
@@ -72,15 +67,11 @@ $found="N";
           </span></td>
           </tr>
 		  <?php } ?>
-        <tr>
+        <tr style="background-color:#ffffff; border-bottom-radius:15px;">
           <td colspan=2 align=center class="errors">
-		  <input name="submit" type="submit" id="submit" value="Login">		  </td>
+		  <input name="submit" type="submit" id="submit" class="btn" value="SUBMIT">		  </td>
         </tr>
       </table>
-    </form></td>
-	    <td width="45%"></td>
-  </tr>
-</table>
-
+    </form>
 </body>
 </html>
