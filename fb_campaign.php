@@ -41,7 +41,7 @@ $data = file_get_contents($url1);
 $arr = json_decode($data, true);
 foreach($arr as $child) {
 foreach($child as $child1) {
-$url = 'https://hitman507bot.herokuapp.com/?sender=918050582590&message='.$message.'&options='.$option.'';
+$url = 'https://hitman507bot.herokuapp.com/?sender=8050582590&message='.$message.'&options='.$option.'';
 file_get_contents($url);
 }
 }
@@ -55,7 +55,7 @@ $data = file_get_contents($url1);
 $arr = json_decode($data, true);
 foreach($arr as $child) {
 foreach($child as $child1) {	
-$url = 'https://hitman507bot.herokuapp.com/?sender=918050582590&message='.$message.'';
+$url = 'https://hitman507bot.herokuapp.com/?sender=8050582590&message='.$message.'';
 file_get_contents($url);
 }
 }
