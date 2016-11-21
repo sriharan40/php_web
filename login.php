@@ -69,7 +69,7 @@ $found="N";
 		  <?php } ?>
         <tr style="background-color:#dcf271; border-bottom-radius:15px;">
           <td colspan=2 align=center class="errors">
-		  <input name="submit" type="submit" id="submit"  value="SUBMIT">		  </td>
+		  <input name="submit" type="submit" class="btn" id="submit"  value="SUBMIT">		  </td>
         </tr>
       </table>
     </form>
