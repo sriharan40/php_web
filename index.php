@@ -35,10 +35,7 @@ $arr = json_decode($data, true);
 include("menu.php");
 ?>
 <div id="content">
-<h3>Top Offers List</h3>
-<br/>
-<a href="edit.php">Add New</a>
-<br/><br/>
+
 <table cellspacing="0" cellpadding="10" border="1">
 <tr>
 	<thead>
@@ -66,6 +63,7 @@ echo '<td>&nbsp;&nbsp; <a href="index.php?id='.$child1["id"].'">Delete</a></td>'
 ?>
 	</tbody>
 </table>
+<a href="edit.php">Add New</a>
 </div>
 <div style="clear:both;"></div>
 </body>
