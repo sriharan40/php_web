@@ -2,6 +2,7 @@
 session_start();
 ?>
 <html>
+<link rel="stylesheet" type="text/css" href="style.css" />
 <title>Top Offers List</title>
 <body style="margin:0 auto;">
 <style>
