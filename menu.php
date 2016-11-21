@@ -2,8 +2,7 @@
 <div id="header-wrapper">
 		<div id="header">
 			<div id="logo">
-				<h1><a href="#">BOTCENTER</a></h1>
-				<p>Control Room</p>
+				<h1>BOTCENTER CONTROL ROOM</h1>
 			</div>
 		</div>
 	</div>
