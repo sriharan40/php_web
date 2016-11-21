@@ -41,8 +41,8 @@ $found="N";
 <br /><br /><br /><br />
 <br /><br />
 <form name="form1" method="post" action="login.php">
-<table border="0" bgcolor="#ffffff" cellpadding="8" cellspacing="10" style="width:300px !important; margin:0 auto; padding:10px; border-radius:15px;">
-  <tr>
+<table border="0" bgcolor="#ffffff" cellpadding="0" cellspacing="0" style="width:300px !important; margin:0 auto; padding:0px;">
+<tr>
 		<td align="center" colspan="2"><h2 style="text-align:center; margin-top:5px;">LOGIN</h2></td>
 		</tr>	
 	   <tr style="background-color:##dcf271;">
