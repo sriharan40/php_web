@@ -60,9 +60,8 @@ file_get_contents($url);
 echo "Message sent successfully.";
 }	
 ?>
-<br/><br />
 
-<table width="420px;" cellspacing="0" cellpadding="10" border="0">
+<table width="420px;" style="border:none; margin:0px;" cellspacing="0" cellpadding="0" border="0">
 <tbody>
 <tr style="background-color:#ffffff; display:none;" class="template">
 <td>Option(s)</td><td><input type="text" name="option[]" value="" size="28" /></td>
@@ -71,7 +70,7 @@ echo "Message sent successfully.";
 </table>
 
 <form method="POST" action="fb_campaign.php" name="form1">
-<table bgcolor="#ffffff" width="420px" style="border:0px solid #333333; border-top-left-radius:15px; border-top-right-radius:15px;" cellspacing="10" cellpadding="10" border="0">
+<table bgcolor="#ffffff" width="420px" style="border:0px solid #333333; margin-bottom:0px;" cellspacing="0" cellpadding="0" border="0">
 <tbody class="fb_content">
 <tr>
 <td>Message</td><td><textarea name="message" rows="5" cols="42" value=""></textarea></td>
@@ -81,7 +80,7 @@ echo "Message sent successfully.";
 </tr>
 </tbody>
 </table>
-<table bgcolor="#ffffff" width="443px" cellspacing="10" cellpadding="10" border="0" style="border:0px solid #333333; border-bottom-left-radius:15px; border-bottom-right-radius:15px; border-top:none;">
+<table bgcolor="#ffffff" width="440px" cellspacing="0" cellpadding="0" border="0" style="border:0px solid #333333; margin-top:1px; border-top:none;">
 <tbody>
 <tr>
 <td><input style="width:47%; padding-left:43px; float:left; text-align:center;" type="button" class="add_option btn" value="Add Option" />&nbsp;&nbsp;<input style="width:47%; float:left; margin-left:10px;" type="submit" class="btn" value="Submit" /></td>
