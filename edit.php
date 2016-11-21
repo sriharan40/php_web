@@ -3,7 +3,7 @@ session_start();
 ?>
 <html>
 <title>Add Top Offers</title>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="jquery-1.12.4.js"></script>
 <script type="text/javascript">
 	var accessToken = "c743619629b2490fab9751dac552094a";
 	var baseUrl = "https://api.api.ai/v1/";
