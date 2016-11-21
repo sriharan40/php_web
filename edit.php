@@ -15,10 +15,8 @@ if ($_SESSION['login'] == "")
 include("menu.php");
 ?>
 <div id="content">
-<h3><u>Add Top Offers</u></h3>
-<br/><br/>
 <form method="POST" action="index.php" name="form1">
-<table cellspacing="0" cellpadding="10" border="1">
+<table cellspacing="0" cellpadding="10">
 <tbody>
 <tr>
 <td>Offer Name</td><td><input type="text" name="offer_name" value="" /></td>
