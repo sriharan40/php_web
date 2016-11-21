@@ -45,7 +45,7 @@ $found="N";
   <tr>
 		<td align="center" colspan="2"><h2 style="text-align:center; margin-top:5px;">LOGIN</h2></td>
 		</tr>	
-	   <tr style="background-color:#ffffff;">
+	   <tr style="background-color:##dcf271;">
           <td><span class="style2">Username</span></td>
           <td><input name="loginid" placeholder="Username" type="text" id="loginid2"></td>
         </tr>
@@ -67,7 +67,7 @@ $found="N";
           </span></td>
           </tr>
 		  <?php } ?>
-        <tr style="background-color:#ffffff; border-bottom-radius:15px;">
+        <tr style="background-color:##dcf271; border-bottom-radius:15px;">
           <td colspan=2 align=center class="errors">
 		  <input name="submit" type="submit" id="submit" class="btn" value="SUBMIT">		  </td>
         </tr>
