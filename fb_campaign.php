@@ -21,8 +21,6 @@ header("location:login.php");
 include("menu.php");
 ?>
 <div id="content">
-<h3><u>Send Message</u></h3>
-<br />
 <?php
 $message = $_POST["message"];
 $option = $_POST["option"];
