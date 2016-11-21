@@ -90,7 +90,7 @@ session_start();
 	}
 	
 	function sendauto() {
-		var text = "Yes";
+		var text = "StuckInAddNewOffer";
 		$.ajax({
 			type: "POST",
 			url: baseUrl + "query?v=20150910",
