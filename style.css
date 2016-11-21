@@ -771,13 +771,13 @@ table tr:hover td {
 /* Header */
 
 #header-wrapper {
-	height: 90px;
+	height: 60px;
 	background: #dcf271;
 	margin-bottom: 30px;
 }
 
 #header {
 	width: 960px;
-	height: 90px;
+	height: 60px;
 	margin: 0 auto;
 }
