@@ -40,14 +40,17 @@ include("menu.php");
 <br/><br/>
 <table cellspacing="0" cellpadding="10" border="1">
 <tr>
+	<thead>
 <th>Offer Name</th>
 <th>Description / Link</th>
 <th>Action</th>
+	</thead>
 </tr>
 <?php
 foreach($arr as $child) {
 foreach($child as $child1) {
 ?>
+	<tbody>
 <tr>
 <?php
 echo '<td>'.$child1["offer_name"].'</td>';
@@ -55,14 +58,14 @@ echo '<td>'.$child1["description"].'</td>';
 echo '<td>&nbsp;&nbsp; <a href="index.php?id='.$child1["id"].'">Delete</a></td>';
 ?>
 
-</tr>
+</tr> 
 <?php
 }
 }
 ?>
+	</tbody>
 </table>
 </div>
 <div style="clear:both;"></div>
-</div>
 </body>
 </html>
