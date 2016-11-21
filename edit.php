@@ -63,13 +63,15 @@ session_start();
 	function setInput(text) {
 		$("#input").val(text);
 		send();
+		$("#input").val("");
 	}
+	
 	function updateRec() {
 		$("#rec").text(recognition ? "Stop" : "Speak");
 	}
 	function send() {
 		var text = $("#input").val();
-   	    setResponse(text+"\n");
+   	    setResponse("<p align='right' style='color:blue;'>"+text+"</p>\n");
 		$.ajax({
 			type: "POST",
 			url: baseUrl + "query?v=20150910",
@@ -144,8 +146,7 @@ include("menu.php");
 </form>
 
 <div class="chat_window" style="margin-left:20px; display:none;">
-<textarea id="response" cols="40" rows="10"></textarea>
-<br />
+<div id="response" style="background-color:#ffffff; overflow:auto; border:1px solid #aaaaaa; border-bottom:none; padding:20px; width:255px; height:170px;"></div>
 <input size="26" id="input" type="text"> <button id="rec">Speak</button>
 </div>
 
