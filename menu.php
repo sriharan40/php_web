@@ -1,5 +1,15 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
+<div id="header-wrapper">
+		<div id="header">
+			<div id="logo">
+				<h1><a href="#">BOTCENTER</a></h1>
+				<p>Control Room</p>
+			</div>
+		</div>
+	</div>
+
 <!--close-Header-part-->
+
 <div class="container">
 	<nav>
 		<ul class="mcd-menu">
