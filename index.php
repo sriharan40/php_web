@@ -36,7 +36,7 @@ include("menu.php");
 ?>
 <div id="content">
 
-<table cellspacing="0" cellpadding="10" border="1">
+<table cellspacing="0" cellpadding="10" >
 <tr>
 	<thead>
 <th>Offer Name</th>
