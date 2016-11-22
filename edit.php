@@ -118,25 +118,22 @@ session_start();
 </script>
 <body style="margin:0 auto;">
 	<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '312339728800370',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+  };
 
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId: "312339728800370",
-        xfbml: true,
-        version: "v2.6"
-      });
-
-    };
-
-    (function(d, s, id){
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) { return; }
-       js = d.createElement(s); js.id = id;
-       js.src = "//connect.facebook.net/en_US/sdk.js";
-       fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
-  </script>
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
   <div class="fb-send-to-messenger" 
   messenger_app_id="312339728800370" 
   page_id="PAGE_ID" 
