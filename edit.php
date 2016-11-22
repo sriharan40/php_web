@@ -121,7 +121,7 @@ session_start();
 
     window.fbAsyncInit = function() {
       FB.init({
-        appId: "APP_ID",
+        appId: "312339728800370",
         xfbml: true,
         version: "v2.6"
       });
@@ -138,7 +138,7 @@ session_start();
 
   </script>
   <div class="fb-send-to-messenger" 
-  messenger_app_id="APP_ID" 
+  messenger_app_id="312339728800370" 
   page_id="PAGE_ID" 
   data-ref="PASS_THROUGH_PARAM" 
   color="blue" 
