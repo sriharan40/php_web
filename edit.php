@@ -116,7 +116,6 @@ session_start();
 		$("#response").append(val+"\n");
 	}
 </script>
-</head>
 <body style="margin:0 auto;">
 <?php
 error_reporting(0);
@@ -128,28 +127,6 @@ if ($_SESSION['login'] == "")
 <?php
 include("menu.php");
 ?>
-<div id="content">
-<form method="POST" action="index.php" name="form1">
-<table cellspacing="0" cellpadding="10">
-<tbody>
-<tr>
-<td>Offer Name</td><td><input type="text" name="offer_name" value="" /></td>
-</tr>
-<tr>
-<td>Description / Link</td><td><input type="text" name="link" value="" /></td>
-</tr>
-<tr>
-<td>&nbsp;</td><td><input type="submit" value="Submit" /></td>
-</tr>
-</tbody>
-</table>
-</form>
-
-<div class="chat_window" style="margin-left:20px; display:none;">
-<div id="response" style="background-color:#ffffff; overflow:auto; border:1px solid #aaaaaa; border-bottom:none; padding:20px; width:255px; height:170px;"></div>
-<input size="26" id="input" type="text"> <button id="rec">Speak</button>
-</div>
-</div>
 <!-- CHAT WITH FB OPTION -->
 <script>
       window.fbAsyncInit = function() {
@@ -179,7 +156,29 @@ include("menu.php");
         <blockquote></blockquote>
       </div>	
 <!-- CHAT WITH FB ENds -->
-<div style="clear:both;"></div>
+<div id="content">
+<form method="POST" action="index.php" name="form1">
+<table cellspacing="0" cellpadding="10">
+<tbody>
+<tr>
+<td>Offer Name</td><td><input type="text" name="offer_name" value="" /></td>
+</tr>
+<tr>
+<td>Description / Link</td><td><input type="text" name="link" value="" /></td>
+</tr>
+<tr>
+<td>&nbsp;</td><td><input type="submit" value="Submit" /></td>
+</tr>
+</tbody>
+</table>
+</form>
+
+<div class="chat_window" style="margin-left:20px; display:none;">
+<div id="response" style="background-color:#ffffff; overflow:auto; border:1px solid #aaaaaa; border-bottom:none; padding:20px; width:255px; height:170px;"></div>
+<input size="26" id="input" type="text"> <button id="rec">Speak</button>
 </div>
+</div>
+
+<div style="clear:both;"></div>
 </body>
 </html>
