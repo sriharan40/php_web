@@ -117,6 +117,33 @@ session_start();
 	}
 </script>
 <body style="margin:0 auto;">
+	<script>
+
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId: "APP_ID",
+        xfbml: true,
+        version: "v2.6"
+      });
+
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) { return; }
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+  </script>
+  <div class="fb-send-to-messenger" 
+  messenger_app_id="APP_ID" 
+  page_id="PAGE_ID" 
+  data-ref="PASS_THROUGH_PARAM" 
+  color="blue" 
+  size="standard">
+</div> 
 <?php
 error_reporting(0);
 if ($_SESSION['login'] == "")
@@ -128,34 +155,7 @@ if ($_SESSION['login'] == "")
 include("menu.php");
 ?>
 <!-- CHAT WITH FB OPTION -->
-<script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '95100348886',
-          xfbml      : true,
-          version    : 'v2.6'
-        });
-      };
- 
-      (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
- 
-    <div class="fb-page" 
-         data-href="https://www.facebook.com/XZY/" 
-         data-tabs="messages" 
-         data-width="400" 
-         data-height="300" 
-         data-small-header="true">
-      <div class="fb-xfbml-parse-ignore">
-        <blockquote></blockquote>
-      </div>	
-<!-- CHAT WITH FB ENds -->
+
 <div id="content">
 <form method="POST" action="index.php" name="form1">
 <table cellspacing="0" cellpadding="10">
