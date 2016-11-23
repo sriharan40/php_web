@@ -83,7 +83,7 @@ FB.Event.subscribe('send_to_messenger', function(response) {
 <div class="fb-send-to-messenger" style="float:right; margin-left:40px;" 
           messenger_app_id="312339728800370" 
 		  page_id="165157840188738" 
-		  data-ref="Send this info to the app" 
+		  data-ref="Yes" 
 		  color="blue" 
 		  size="standard">
 </div>
