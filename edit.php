@@ -31,7 +31,7 @@ FB.init({
     appId      : '312339728800370',
     status     : true,
     xfbml      : true,
-    cookie: true,
+    //cookie: true,
     version    : 'v2.6' // or v2.6, v2.5, v2.4, v2.3
   });
 
@@ -61,14 +61,14 @@ FB.Event.subscribe('auth.statusChange', function(response) {
 	//alert("Login needed");
 	    
 });*/
-FB.Event.subscribe('send_to_messenger', function(response) {
+/*FB.Event.subscribe('send_to_messenger', function(response) {
     if ( response.event == 'clicked' ) {	    
 	
           // callback for events triggered by the plugin
           //  window.top.location = 'https://www.messenger.com/t/himantmusic/';
     };
       });
-};
+};*/
 (function(d, s, id){
     var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) {return;}
@@ -78,7 +78,15 @@ FB.Event.subscribe('send_to_messenger', function(response) {
     }(document, 'script', 'facebook-jssdk')
   );
 </script>    
-
+<div class="fb-messenger-checkbox"  
+  origin="php-web.herokuapp.com"
+  page_id=165157840188738
+  messenger_app_id=312339728800370
+  user_ref="usernumdummy" 
+  prechecked="true" 
+  allow_login="true" 
+  size="large">
+</div> 
 <div id="content">
 <form method="POST" action="index.php" name="form1">
 <table cellspacing="0" cellpadding="10">
@@ -133,15 +141,7 @@ FB.Event.subscribe('send_to_messenger', function(response) {
 		  size="standard">
 </div>-->
 
-<div class="fb-messenger-checkbox"  
-  origin="https://php-web.herokuapp.com"
-  page_id=165157840188738
-  messenger_app_id=312339728800370
-  user_ref="usernumdummy" 
-  prechecked="true" 
-  allow_login="true" 
-  size="large">
-</div> 
+
 </div>
 
 </div>
