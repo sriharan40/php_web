@@ -94,7 +94,7 @@ include("menu.php");
   origin="https://php-web.herokuapp.com"
   page_id="165157840188738"
   messenger_app_id="312339728800370"
-  user_ref="<?php 	mt_rand(10000, 99999);	?>"
+  user_ref="<?php substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);?>"
   prechecked="true" 
   allow_login="true" 
   size="large"></div>  
