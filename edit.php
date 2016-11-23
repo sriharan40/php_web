@@ -79,7 +79,16 @@ FB.Event.subscribe('send_to_messenger', function(response) {
 <blockquote></blockquote>
 </div>
 </div> -->
-	
+
+<div class="fb-messenger-checkbox"  
+  origin="https://www.facebook.com/himantmusic/"
+  page_id="165157840188738"
+  messenger_app_id="312339728800370"
+  user_ref="9876543210" 
+  prechecked="true" 
+  allow_login="true" 
+  size="large"></div> 
+  
 <div class="fb-send-to-messenger" style="float:right; margin-left:40px;" 
           messenger_app_id="312339728800370" 
 		  page_id="165157840188738" 
