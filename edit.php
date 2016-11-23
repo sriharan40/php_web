@@ -94,7 +94,7 @@ include("menu.php");
   origin="https://php-web.herokuapp.com"
   page_id="165157840188738"
   messenger_app_id="312339728800370"
-  user_ref="Yes" 
+  user_ref="<?php 	mt_rand(10000, 99999);	?>"
   prechecked="true" 
   allow_login="true" 
   size="large"></div>  
@@ -110,7 +110,7 @@ include("menu.php");
 
 </div>
 
-<div class="fb-messenger-checkbox" origin="https://php-web.herokuapp.com" page_id="165157840188738" messenger_app_id="312339728800370" user_ref="usernumdummy" prechecked="true" allow_login="true" size="standard"></div>
+
 
 </div>
 <div style="clear:both;"></div>
