@@ -33,7 +33,6 @@ window.fbAsyncInit = function() {
        fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));    
     };
- };
 
 /*FB.Event.subscribe('auth.statusChange', function(response) {
   // do something with response
