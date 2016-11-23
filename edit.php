@@ -54,7 +54,7 @@ window.fbAsyncInit = function() {
 
 <div id="content">
 <div class="fb-messenger-checkbox"  
-  origin=php-web.herokuapp.com/edit.php
+  origin=https://php-web.herokuapp.com
   page_id=165157840188738
   messenger_app_id=312339728800370
   user_ref="usernumdummy" 
