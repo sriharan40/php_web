@@ -76,7 +76,7 @@ include("menu.php");
 
 
 <div class="fb-messenger-checkbox"  
-  origin='https://php-web.herokuapp.com'
+  origin='https://www.facebook.com/himantmusic'
   page_id=165157840188738
   messenger_app_id=312339728800370
   user_ref="usernumdummy" 
