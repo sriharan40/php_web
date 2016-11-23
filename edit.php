@@ -19,22 +19,22 @@ include("menu.php");
 <body style="margin:0 auto;">
 <script>
 window.fbAsyncInit = function() {
-/*FB.init({
-  appId      : '312339728800370',
-  xfbml      : true,
-  status: true, 
-  cookie: true,
-  version: "v2.6"  
-});*/
+    FB.init({
+      appId      : 'APP_ID',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
 
-FB.init({
-    appId      : '312339728800370',
-    status     : true,
-    xfbml      : true,
-    //cookie: true,
-    version    : 'v2.6' // or v2.6, v2.5, v2.4, v2.3
-  });
+  };
 
+  (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk')
+  );
 /*FB.getLoginStatus(function(response) {
   if (response.status === 'connected') {
     // the user is logged in and has authenticated your
@@ -69,14 +69,7 @@ FB.Event.subscribe('auth.statusChange', function(response) {
     };
       });
 };*/
-(function(d, s, id){
-    var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) {return;}
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk')
-  );
+
 </script>    
 <div class="fb-messenger-checkbox"  
   origin="php-web.herokuapp.com"
