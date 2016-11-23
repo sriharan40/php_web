@@ -27,16 +27,21 @@ FB.init({
   version: "v2.6"  
 });
 
-FB.Event.subscribe('send_to_messenger', function(response) {
-    if ( response.event == 'clicked' ) {
-	    FB.getLoginStatus(function(response) {
-  if (response.status === 'connected') {
+FB.init({
+    appId      : '{your-app-id}',
+    status     : true,
+    xfbml      : true,
+    version    : 'v2.7' // or v2.6, v2.5, v2.4, v2.3
+  });
+
+//FB.getLoginStatus(function(response) {
+  //if (response.status === 'connected') {
     // the user is logged in and has authenticated your
     // app, and response.authResponse supplies
     // the user's ID, a valid access token, a signed
     // request, and the time the access token 
     // and signed request each expire
-    var uid = response.authResponse.userID;
+    /*var uid = response.authResponse.userID;
     var accessToken = response.authResponse.accessToken;
   } else if (response.status === 'not_authorized') {
     // the user is logged in to Facebook, 
@@ -45,7 +50,14 @@ FB.Event.subscribe('send_to_messenger', function(response) {
     // the user isn't logged in to Facebook.
   }
 		     alert(JSON.stringify(response));
- });
+ });*/
+FB.Event.subscribe('auth.login', function(response) {
+  // do something with response
+	alert(JSON.stringify(response));
+});
+FB.Event.subscribe('send_to_messenger', function(response) {
+    if ( response.event == 'clicked' ) {
+	    
 		  
           // callback for events triggered by the plugin
           //  window.top.location = 'https://www.messenger.com/t/himantmusic/';
