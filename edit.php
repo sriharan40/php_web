@@ -46,11 +46,28 @@ FB.getLoginStatus(function(response) {
   } else if (response.status === 'not_authorized') {
     // the user is logged in to Facebook, 
     // but has not authenticated your app
+	  FB.login(checkLoginStatus, {scope:'email'});
   } else {
     // the user isn't logged in to Facebook.
   }
 		     alert(JSON.stringify(response));
  });
+function checkLoginStatus(response) {
+        if(response && response.status == 'connected') {
+          alert('User is authorized');
+          
+          // Hide the login button
+          document.getElementById('loginButton').style.display = 'none';
+          
+          // Now Personalize the User Experience
+          console.log('Access Token: ' + response.authResponse.accessToken);
+        } else {
+          alert('User is not authorized');
+          
+          // Display the login button
+          document.getElementById('loginButton').style.display = 'block';
+        }
+      }
 FB.Event.subscribe('auth.statusChange', function(response) {
   // do something with response
 	//alert(JSON.stringify(response));
