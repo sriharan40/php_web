@@ -29,8 +29,9 @@ FB.init({
 
 FB.Event.subscribe('send_to_messenger', function(response) {
     if ( response.event == 'clicked' ) {
+		   alert(response);
           // callback for events triggered by the plugin
-            window.top.location = 'https://www.messenger.com/t/himantmusic/';
+          //  window.top.location = 'https://www.messenger.com/t/himantmusic/';
     };
       });
 };
