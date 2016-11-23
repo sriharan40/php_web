@@ -74,12 +74,12 @@ window.fbAsyncInit = function() {
 		     
  });*/
 
-FB.Event.subscribe('auth.statusChange', function(response) {
+/*FB.Event.subscribe('auth.statusChange', function(response) {
   // do something with response
 	alert(JSON.stringify(response));
 	//alert("Login needed");
 	    
-});
+});*/
 
 /*FB.Event.subscribe('send_to_messenger', function(response) {
     if ( response.event == 'clicked' ) {	    
