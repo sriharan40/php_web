@@ -38,7 +38,7 @@ FB.Event.subscribe('send_to_messenger', function(response) {
  var js, fjs = d.getElementsByTagName(s)[0];
  if (d.getElementById(id)) {return;}
  js = d.createElement(s); js.id = id;
- js.src = "//connect.facebook.net/en_US/sdk.js";
+ js.src = "https://connect.facebook.net/en_US/sdk.js";
  fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 </script>
@@ -79,7 +79,13 @@ FB.Event.subscribe('send_to_messenger', function(response) {
 </div>
 </div>
 	
-<div class="fb-send-to-messenger" style="float:right; margin-left:40px;" messenger_app_id="312339728800370" page_id="165157840188738" data-ref="Yes" color="blue" size="standard"></div>
+<div class="fb-send-to-messenger" style="float:right; margin-left:40px;" 
+          messenger_app_id="312339728800370" 
+		  page_id="165157840188738" 
+		  data-ref="Yes" 
+		  color="blue" 
+		  size="standard">
+</div>
 
 </div>
 
