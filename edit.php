@@ -31,26 +31,10 @@ window.fbAsyncInit = function() {
        js = d.createElement(s); js.id = id;
        js.src = "//connect.facebook.net/en_US/sdk.js";
        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-     
-	FB.Event.subscribe('messenger_checkbox', function(e) {
-      console.log("messenger_checkbox event");
-      console.log(e);
-      
-      if (e.event == 'rendered') {
-        console.log("Plugin was rendered");
-      } else if (e.event == 'checkbox') {
-        var checkboxState = e.state;
-        console.log("Checkbox state: " + checkboxState);
-      } else if (e.event == 'not_you') {
-        console.log("User clicked 'not you'");
-      } else if (e.event == 'hidden') {
-        console.log("Plugin was hidden");
-      }
-      
+    }(document, 'script', 'facebook-jssdk'));    
     });
 	// LOGIN STATUS
-	FB.getLoginStatus(function(response) {
+FB.getLoginStatus(function(response) {
   if (response.status === 'connected') {
     // the user is logged in and has authenticated your
     // app, and response.authResponse supplies
@@ -68,7 +52,7 @@ window.fbAsyncInit = function() {
     // the user isn't logged in to Facebook.
   }
 		     
- });
+ };
   };
 
   
