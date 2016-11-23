@@ -91,6 +91,8 @@ window.fbAsyncInit = function() {
 //};
 
 </script>    
+
+<div id="content">
 <div class="fb-messenger-checkbox"  
   origin=php-web.herokuapp.com
   page_id=165157840188738
@@ -100,7 +102,6 @@ window.fbAsyncInit = function() {
   allow_login="true" 
   size="small">
 </div> 
-<div id="content">
 <form method="POST" action="index.php" name="form1">
 <table cellspacing="0" cellpadding="10">
 <tbody>
