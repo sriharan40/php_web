@@ -114,15 +114,7 @@ FB.Event.subscribe('send_to_messenger', function(response) {
 </div>
 </div> -->
 
-<div class="fb-messenger-checkbox"  
-  origin="https://php-web.herokuapp.com"
-  page_id=165157840188738
-  messenger_app_id=312339728800370
-  user_ref="usernumdummy" 
-  prechecked="true" 
-  allow_login="true" 
-  size="large">
-</div>      
+     
 <!--<div class="fb-messenger-checkbox"  
   origin="https://php-web.herokuapp.com/edit.php"
   page_id="165157840188738"
@@ -132,14 +124,23 @@ FB.Event.subscribe('send_to_messenger', function(response) {
   allow_login="true" 
   size="large"></div>  -->
   
-<div class="fb-send-to-messenger" style="float:right; margin-left:40px;" 
+<!--<div class="fb-send-to-messenger" style="float:right; margin-left:40px;" 
           messenger_app_id="312339728800370" 
 		  page_id="165157840188738" 
 		  data-ref="Yes" 
 		  color="blue" 
 		  size="standard">
-</div>
+</div>-->
 
+<div class="fb-messenger-checkbox"  
+  origin="https://php-web.herokuapp.com"
+  page_id=165157840188738
+  messenger_app_id=312339728800370
+  user_ref="usernumdummy" 
+  prechecked="true" 
+  allow_login="true" 
+  size="large">
+</div> 
 </div>
 
 </div>
