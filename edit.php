@@ -53,15 +53,7 @@ window.fbAsyncInit = function() {
 </script>    
 
 <div id="content">
-<div class="fb-messenger-checkbox"  
-  origin=https://php-web.herokuapp.com
-  page_id=165157840188738
-  messenger_app_id=312339728800370
-  user_ref="usernumdummy" 
-  prechecked="true" 
-  allow_login="true" 
-  size="standard">
-</div> 
+
 <form method="POST" action="index.php" name="form1">
 <table cellspacing="0" cellpadding="10">
 <tbody>
@@ -79,13 +71,21 @@ window.fbAsyncInit = function() {
 </form>
 
 
-	
-<!--<div class="chat_window" style="margin-left:20px; float:left; display:none;">
+<div class="fb-messenger-checkbox"  
+  origin=https://php-web.herokuapp.com
+  page_id=165157840188738
+  messenger_app_id=312339728800370
+  user_ref="usernumdummy" 
+  prechecked="true" 
+  allow_login="true" 
+  size="standard">
+</div> 
+<div class="chat_window" style="margin-left:20px; float:left; display:none;">
 
 <div style="float:left;">
 <div id="response" style="background-color:#ffffff; overflow:auto; border:1px solid #aaaaaa; border-bottom:none; padding:20px; width:255px; height:170px;"></div>
 <input size="26" id="input" type="text"> <button id="rec">Speak</button>
-</div> -->
+</div>
  
 <!-- <div style="margin-left:20px;" class="fb-page" 
 	 data-href="https://www.facebook.com/himantmusic/" 
