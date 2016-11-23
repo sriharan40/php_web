@@ -49,12 +49,8 @@ window.fbAsyncInit = function() {
       }
       
     });
-  };
-
-  
-
-	
-/*FB.getLoginStatus(function(response) {
+	// LOGIN STATUS
+	FB.getLoginStatus(function(response) {
   if (response.status === 'connected') {
     // the user is logged in and has authenticated your
     // app, and response.authResponse supplies
@@ -72,7 +68,13 @@ window.fbAsyncInit = function() {
     // the user isn't logged in to Facebook.
   }
 		     
- });*/
+ });
+  };
+
+  
+
+	
+
 
 /*FB.Event.subscribe('auth.statusChange', function(response) {
   // do something with response
