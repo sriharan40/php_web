@@ -29,7 +29,7 @@ FB.init({
 
 FB.Event.subscribe('send_to_messenger', function(response) {
     if ( response.event == 'clicked' ) {
-		   alert(response);
+		   alert(JSON.stringify(response));
           // callback for events triggered by the plugin
           //  window.top.location = 'https://www.messenger.com/t/himantmusic/';
     };
