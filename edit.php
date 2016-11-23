@@ -17,7 +17,7 @@ include("menu.php");
 ?>
 <!-- CHAT WITH FB OPTION -->
 <body style="margin:0 auto;">
-<script-src https://facebook.com; child-src https://facebook.com>
+<script>
 window.fbAsyncInit = function() {
     FB.init({
       appId      : 'APP_ID',
