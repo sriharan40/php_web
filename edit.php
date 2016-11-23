@@ -51,12 +51,12 @@ FB.getLoginStatus(function(response) {
   } else {
     // the user isn't logged in to Facebook.
   }
-		     alert("Login status": + JSON.stringify(response));
+		     alert("Login status:" + JSON.stringify(response));
  });
 
 FB.Event.subscribe('auth.statusChange', function(response) {
   // do something with response
-	alert("Status change" + JSON.stringify(response));
+	alert("Status change:" + JSON.stringify(response));
 });
 FB.Event.subscribe('send_to_messenger', function(response) {
     if ( response.event == 'clicked' ) {
