@@ -20,7 +20,7 @@ include("menu.php");
 <script>
 window.fbAsyncInit = function() {
     FB.init({
-      appId      : 'APP_ID',
+      appId      : '312339728800370',
       xfbml      : true,
       version    : 'v2.6'
     });
