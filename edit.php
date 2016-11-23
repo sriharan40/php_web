@@ -32,33 +32,8 @@ window.fbAsyncInit = function() {
        js.src = "//connect.facebook.net/en_US/sdk.js";
        fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));    
-    });
-	// LOGIN STATUS
-FB.getLoginStatus(function(response) {
-  if (response.status === 'connected') {
-    // the user is logged in and has authenticated your
-    // app, and response.authResponse supplies
-    // the user's ID, a valid access token, a signed
-    // request, and the time the access token 
-    // and signed request each expire
-    var uid = response.authResponse.userID;
-    var accessToken = response.authResponse.accessToken;
-    alert("Login status:" + JSON.stringify(response));
-  } else if (response.status === 'not_authorized') {
-    // the user is logged in to Facebook, 
-    // but has not authenticated your app
-	 FB.login();
-  } else {
-    // the user isn't logged in to Facebook.
-  }
-		     
- };
-  };
-
-  
-
-	
-
+    };
+ )};
 
 /*FB.Event.subscribe('auth.statusChange', function(response) {
   // do something with response
