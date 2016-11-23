@@ -18,22 +18,21 @@ include("menu.php");
 <!-- CHAT WITH FB OPTION -->
 <body style="margin:0 auto;">
 <script>
-window.fbAsyncInit = function() {
-FB.init({
-appId: "312339728800370",
-xfbml: true,
-version: "v2.6"
-});
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '312339728800370',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+  };
 
-};
-
-(function(d, s, id){
-var js, fjs = d.getElementsByTagName(s)[0];
-if (d.getElementById(id)) { return; }
-js = d.createElement(s); js.id = id;
-js.src = "//connect.facebook.net/en_US/sdk.js";
-fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
 
 /*FB.Event.subscribe('auth.statusChange', function(response) {
   // do something with response
@@ -91,14 +90,14 @@ fjs.parentNode.insertBefore(js, fjs);
 </div> -->
 
      
-<!--<div class="fb-messenger-checkbox"  
-  origin="https://php-web.herokuapp.com/edit.php"
+<div class="fb-messenger-checkbox"  
+  origin="https://php-web.herokuapp.com"
   page_id="165157840188738"
   messenger_app_id="312339728800370"
   user_ref="Yes" 
   prechecked="true" 
   allow_login="true" 
-  size="large"></div>  -->
+  size="large"></div>  
   
 <!--<div class="fb-send-to-messenger" style="float:right; margin-left:40px;" 
           messenger_app_id="312339728800370" 
