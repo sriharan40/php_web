@@ -22,9 +22,9 @@ window.fbAsyncInit = function() {
 FB.init({
   appId      : '312339728800370',
   xfbml      : true,
- status: true, 
-    cookie: true,
-        version: "v2.6"  
+  status: true, 
+  cookie: true,
+  version: "v2.6"  
 });
 
 FB.Event.subscribe('send_to_messenger', function(response) {
@@ -68,7 +68,7 @@ FB.Event.subscribe('send_to_messenger', function(response) {
 <input size="26" id="input" type="text"> <button id="rec">Speak</button>
 </div>
  
-<div style="margin-left:20px;" class="fb-page" 
+<!-- <div style="margin-left:20px;" class="fb-page" 
 	 data-href="https://www.facebook.com/himantmusic/" 
 	 data-tabs="messages" 
 	 data-width="340" 
@@ -78,12 +78,12 @@ FB.Event.subscribe('send_to_messenger', function(response) {
 <div class="fb-xfbml-parse-ignore">
 <blockquote></blockquote>
 </div>
-</div>
+</div> -->
 	
 <div class="fb-send-to-messenger" style="float:right; margin-left:40px;" 
           messenger_app_id="312339728800370" 
 		  page_id="165157840188738" 
-		  data-ref="Yes" 
+		  data-ref="{query: "Yes", lang: "en", sessionId: "somerandomthing" }" 
 		  color="blue" 
 		  size="standard">
 </div>
