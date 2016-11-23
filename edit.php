@@ -18,7 +18,6 @@ include("menu.php");
 <!-- CHAT WITH FB OPTION -->
 <body style="margin:0 auto;">
 <script>
-
 window.fbAsyncInit = function() {
 FB.init({
 appId: "312339728800370",
@@ -80,13 +79,13 @@ fjs.parentNode.insertBefore(js, fjs);
 </div>
 
 <div class="fb-messenger-checkbox"  
-  origin='https://www.facebook.com/himantmusic/'
-  page_id=165157840188738
-  messenger_app_id=312339728800370
+  origin='https://php-web.herokuapp.com'
+  page_id="165157840188738"
+  messenger_app_id="312339728800370"
   user_ref="usernumdummy" 
   prechecked="true" 
   allow_login="true" 
-  size="standard">
+  size="large">
 </div> 
 
 <!-- <div style="margin-left:20px;" class="fb-page" 
@@ -124,5 +123,6 @@ fjs.parentNode.insertBefore(js, fjs);
 
 	</div>
 <div style="clear:both;"></div>
+
 </body>
 </html>
