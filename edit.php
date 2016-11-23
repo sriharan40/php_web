@@ -51,7 +51,7 @@ FB.init({
   }
 		     alert(JSON.stringify(response));
  });*/
-FB.Event.subscribe('auth.login', function(response) {
+FB.Event.subscribe('auth.statusChange', function(response) {
   // do something with response
 	alert(JSON.stringify(response));
 });
