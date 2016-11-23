@@ -22,8 +22,17 @@ window.fbAsyncInit = function() {
 FB.init({
   appId      : '312339728800370',
   xfbml      : true,
-  version    : 'v2.8'
+ status: true, 
+    cookie: true,
+        version: "v2.6"  
 });
+
+FB.Event.subscribe('send_to_messenger', function(response) {
+    if ( response.event == 'clicked' ) {
+          // callback for events triggered by the plugin
+            window.top.location = 'https://www.messenger.com/t/himantmusic/';
+    };
+      });
 };
 (function(d, s, id){
  var js, fjs = d.getElementsByTagName(s)[0];
