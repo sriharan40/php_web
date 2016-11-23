@@ -31,7 +31,8 @@ FB.init({
     appId      : '312339728800370',
     status     : true,
     xfbml      : true,
-    version    : 'v2.7' // or v2.6, v2.5, v2.4, v2.3
+    cookie: true,
+    version    : 'v2.6' // or v2.6, v2.5, v2.4, v2.3
   });
 
 FB.getLoginStatus(function(response) {
@@ -46,31 +47,16 @@ FB.getLoginStatus(function(response) {
   } else if (response.status === 'not_authorized') {
     // the user is logged in to Facebook, 
     // but has not authenticated your app
-	  FB.login(checkLoginStatus, {scope:'email'});
+	 // FB.login(checkLoginStatus, {scope:'email'});
   } else {
     // the user isn't logged in to Facebook.
   }
-		     alert(JSON.stringify(response));
+		     alert("Login status": + JSON.stringify(response));
  });
-function checkLoginStatus(response) {
-        if(response && response.status == 'connected') {
-          alert('User is authorized');
-          
-          // Hide the login button
-          document.getElementById('loginButton').style.display = 'none';
-          
-          // Now Personalize the User Experience
-          console.log('Access Token: ' + response.authResponse.accessToken);
-        } else {
-          alert('User is not authorized');
-          
-          // Display the login button
-          document.getElementById('loginButton').style.display = 'block';
-        }
-      }
+
 FB.Event.subscribe('auth.statusChange', function(response) {
   // do something with response
-	//alert(JSON.stringify(response));
+	alert("Status change" + JSON.stringify(response));
 });
 FB.Event.subscribe('send_to_messenger', function(response) {
     if ( response.event == 'clicked' ) {
