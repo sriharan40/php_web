@@ -96,7 +96,7 @@ FB.Event.subscribe('auth.statusChange', function(response) {
   user_ref="usernumdummy" 
   prechecked="true" 
   allow_login="true" 
-  size="large">
+  size="small">
 </div> 
 	
 <div class="chat_window" style="margin-left:20px; float:left; display:none;">
