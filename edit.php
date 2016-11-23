@@ -29,7 +29,24 @@ FB.init({
 
 FB.Event.subscribe('send_to_messenger', function(response) {
     if ( response.event == 'clicked' ) {
-		   alert(JSON.stringify(response));
+	    FB.getLoginStatus(function(response) {
+  if (response.status === 'connected') {
+    // the user is logged in and has authenticated your
+    // app, and response.authResponse supplies
+    // the user's ID, a valid access token, a signed
+    // request, and the time the access token 
+    // and signed request each expire
+    var uid = response.authResponse.userID;
+    var accessToken = response.authResponse.accessToken;
+  } else if (response.status === 'not_authorized') {
+    // the user is logged in to Facebook, 
+    // but has not authenticated your app
+  } else {
+    // the user isn't logged in to Facebook.
+  }
+		     alert(JSON.stringify(response));
+ });
+		  
           // callback for events triggered by the plugin
           //  window.top.location = 'https://www.messenger.com/t/himantmusic/';
     };
@@ -80,14 +97,14 @@ FB.Event.subscribe('send_to_messenger', function(response) {
 </div>
 </div> -->
 
-<div class="fb-messenger-checkbox"  
+<!--<div class="fb-messenger-checkbox"  
   origin="https://php-web.herokuapp.com/edit.php"
   page_id="165157840188738"
   messenger_app_id="312339728800370"
   user_ref="Yes" 
   prechecked="true" 
   allow_login="true" 
-  size="large"></div> 
+  size="large"></div>  -->
   
 <div class="fb-send-to-messenger" style="float:right; margin-left:40px;" 
           messenger_app_id="312339728800370" 
