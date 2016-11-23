@@ -91,7 +91,15 @@ window.fbAsyncInit = function() {
 //};
 
 </script>    
-
+<div class="fb-messenger-checkbox"  
+  origin=php-web.herokuapp.com
+  page_id=165157840188738
+  messenger_app_id=312339728800370
+  user_ref="usernumdummy" 
+  prechecked="true" 
+  allow_login="true" 
+  size="small">
+</div> 
 <div id="content">
 <form method="POST" action="index.php" name="form1">
 <table cellspacing="0" cellpadding="10">
@@ -109,15 +117,7 @@ window.fbAsyncInit = function() {
 </table>
 </form>
 
-<div class="fb-messenger-checkbox"  
-  origin=php-web.herokuapp.com
-  page_id=165157840188738
-  messenger_app_id=312339728800370
-  user_ref="usernumdummy" 
-  prechecked="true" 
-  allow_login="true" 
-  size="small">
-</div> 
+
 	
 <!--<div class="chat_window" style="margin-left:20px; float:left; display:none;">
 
