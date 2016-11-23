@@ -13,7 +13,7 @@ if ($_SESSION['login'] == "")
 }
 ?>
 <?php
-//include("menu.php");
+include("menu.php");
 ?>
 <!-- CHAT WITH FB OPTION -->
 <body style="margin:0 auto;">
