@@ -71,15 +71,7 @@ FB.Event.subscribe('auth.statusChange', function(response) {
 };*/
 
 </script>    
-<div class="fb-messenger-checkbox"  
-  origin="php-web.herokuapp.com"
-  page_id=165157840188738
-  messenger_app_id=312339728800370
-  user_ref="usernumdummy" 
-  prechecked="true" 
-  allow_login="true" 
-  size="large">
-</div> 
+
 <div id="content">
 <form method="POST" action="index.php" name="form1">
 <table cellspacing="0" cellpadding="10">
@@ -97,6 +89,16 @@ FB.Event.subscribe('auth.statusChange', function(response) {
 </table>
 </form>
 
+<div class="fb-messenger-checkbox"  
+  origin="php-web.herokuapp.com"
+  page_id=165157840188738
+  messenger_app_id=312339728800370
+  user_ref="usernumdummy" 
+  prechecked="true" 
+  allow_login="true" 
+  size="large">
+</div> 
+	
 <div class="chat_window" style="margin-left:20px; float:left; display:none;">
 
 <div style="float:left;">
