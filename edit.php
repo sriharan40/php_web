@@ -57,11 +57,13 @@ FB.getLoginStatus(function(response) {
 FB.Event.subscribe('auth.statusChange', function(response) {
   // do something with response
 	alert("Status change:" + JSON.stringify(response));
+	alert("Login needed");
+	    FB.login();
 });
 FB.Event.subscribe('send_to_messenger', function(response) {
     if ( response.event == 'clicked' ) {
 	    
-		  
+	
           // callback for events triggered by the plugin
           //  window.top.location = 'https://www.messenger.com/t/himantmusic/';
     };
