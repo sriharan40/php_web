@@ -3,8 +3,8 @@ session_start();
 ?>
 <html>
 <title>Add Top Offers</title>
-<!--<script src="jquery-1.12.4.js"></script>
-<script src="script.js"></script>  -->
+<script src="jquery-1.12.4.js"></script>
+<script src="script.js"></script>
 <?php
 error_reporting(0);
 if ($_SESSION['login'] == "")
