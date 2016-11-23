@@ -81,7 +81,7 @@ FB.Event.subscribe('send_to_messenger', function(response) {
 </div> -->
 
 <div class="fb-messenger-checkbox"  
-  origin="https://www.facebook.com/himantmusic/"
+  origin="https://php-web.herokuapp.com"
   page_id="165157840188738"
   messenger_app_id="312339728800370"
   user_ref="9876543210" 
