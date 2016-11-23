@@ -44,21 +44,22 @@ FB.getLoginStatus(function(response) {
     // and signed request each expire
     var uid = response.authResponse.userID;
     var accessToken = response.authResponse.accessToken;
+    alert("Login status:" + JSON.stringify(response));
   } else if (response.status === 'not_authorized') {
     // the user is logged in to Facebook, 
     // but has not authenticated your app
-	 // FB.login(checkLoginStatus, {scope:'email'});
+	 FB.login();
   } else {
     // the user isn't logged in to Facebook.
   }
-		     alert("Login status:" + JSON.stringify(response));
+		     
  });
 
 FB.Event.subscribe('auth.statusChange', function(response) {
   // do something with response
-	alert("Status change:" + JSON.stringify(response));
-	alert("Login needed");
-	    FB.login();
+	alert(JSON.stringify(response));
+	//alert("Login needed");
+	    
 });
 FB.Event.subscribe('send_to_messenger', function(response) {
     if ( response.event == 'clicked' ) {
