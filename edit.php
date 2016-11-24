@@ -18,6 +18,7 @@ include("menu.php");
 <!-- CHAT WITH FB OPTION -->
 <body style="margin:0 auto;">
 <script>
+var uid = 0; 
 window.fbAsyncInit = function() {
 /*FB.init({
   appId      : '312339728800370',
@@ -40,7 +41,7 @@ FB.getLoginStatus(function(response) {
     // the user's ID, a valid access token, a signed
     // request, and the time the access token 
     // and signed request each expire
-    var uid = response.authResponse.userID;
+    uid = response.authResponse.userID;
     var accessToken = response.authResponse.accessToken;
     alert("Login status:" + JSON.stringify(response));
   } else if (response.status === 'not_authorized') {
@@ -61,6 +62,7 @@ FB.Event.subscribe('auth.statusChange', function(response) {
 
 FB.Event.subscribe('send_to_messenger', function(response) {
     if ( response.event == 'clicked' ) {
+	alert(uid);	
 	$.ajax({
 	  "dataType": "json",
 	  "contentType": "application/json",
@@ -69,7 +71,7 @@ FB.Event.subscribe('send_to_messenger', function(response) {
       data: JSON.stringify({
         "recipient": {
 			//"user_ref": "<?php echo $user_ref; ?>"
-			"id": response.authResponse.userID
+			"id": uid
 		},
         "message": {
 			"text":"StuckInAddNewOffer",
