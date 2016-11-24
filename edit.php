@@ -58,9 +58,30 @@ FB.Event.subscribe('auth.statusChange', function(response) {
 	//alert("Login needed");
 	    
 });
+
 FB.Event.subscribe('send_to_messenger', function(response) {
     if ( response.event == 'clicked' ) {
-	    
+	$.ajax({
+	  "dataType": "json",
+	  "contentType": "application/json",
+	  "url": "https://graph.facebook.com/me/messages?access_token=EAAEcEkKVmnIBAPVZAKS2lNccsxPgL13xL3JF2FFzZA09wxm55At7rrit8ZCDZADZCJc8WRe1U06c4iqUWWFkj50mmYZCBGqaZCZCV4bTYv2ThSKUBTal4hvIRuODElTZCGjeF2j2nASoyWWgy1tXkmk5fVZCfdsXUec6efGZAnv4KZAP1QZDZD",
+      "method": "POST",
+      data: JSON.stringify({
+        "recipient": {
+			//"user_ref": "<?php echo $user_ref; ?>"
+			"id": response.authResponse.userID
+		},
+        "message": {
+			"text":"StuckInAddNewOffer",
+			}
+      }),
+	  success: function(data) {
+		console.log(data);		  
+	  },
+	  error: function(e) {
+		console.log(e);
+	  }
+		});	    
 	
           // callback for events triggered by the plugin
           //  window.top.location = 'https://www.messenger.com/t/himantmusic/';
@@ -77,30 +98,6 @@ FB.Event.subscribe('send_to_messenger', function(response) {
 
 	// CHECK ENDS
 	// CHECK GRAPH CALL
-$(document).ready(function() {
-	$.ajax({
-	  "dataType": "json",
-	  "contentType": "application/json",
-	  "url": "https://graph.facebook.com/me/messages?access_token=EAAEcEkKVmnIBAPVZAKS2lNccsxPgL13xL3JF2FFzZA09wxm55At7rrit8ZCDZADZCJc8WRe1U06c4iqUWWFkj50mmYZCBGqaZCZCV4bTYv2ThSKUBTal4hvIRuODElTZCGjeF2j2nASoyWWgy1tXkmk5fVZCfdsXUec6efGZAnv4KZAP1QZDZD",
-      "method": "POST",
-      data: JSON.stringify({
-        "recipient": {
-			//"user_ref": "<?php echo $user_ref; ?>"
-			"id": "1446924325335738"
-		},
-        "message": {
-			"text":"StuckInAddNewOffer",
-			}
-      }),
-	  success: function(data) {
-		console.log(data);		  
-	  },
-	  error: function(e) {
-		console.log(e);
-	  }
-		});
-
-});
 
 </script>
 
