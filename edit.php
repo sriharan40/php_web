@@ -41,9 +41,13 @@ FB.getLoginStatus(function(response) {
     // the user's ID, a valid access token, a signed
     // request, and the time the access token 
     // and signed request each expire
+  FB.api('/me', function(response){
+        alert ("Welcome " + response.name + ": Your UID is " + response.id); 
+    });
+	
     uid = response.authResponse.userID;
     var accessToken = response.authResponse.accessToken;
-    alert("Login status:" + JSON.stringify(response));
+    // alert("Login status:" + JSON.stringify(response));
   } else if (response.status === 'not_authorized') {
     // the user is logged in to Facebook, 
     // but has not authenticated your app
@@ -55,9 +59,8 @@ FB.getLoginStatus(function(response) {
  });
 FB.Event.subscribe('auth.statusChange', function(response) {
   // do something with response
-	alert(JSON.stringify(response));
-	//alert("Login needed");
-	    
+	//alert(JSON.stringify(response));
+	//alert("Login needed");  
 });
 
 FB.Event.subscribe('send_to_messenger', function(response) {
