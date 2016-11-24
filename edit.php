@@ -109,6 +109,20 @@ $user_ref = substr(str_shuffle(str_repeat($x,ceil($length/strlen($x)))),1,$lengt
   size="large">
 </div>  
 <script>
+	// CHECK ENDS
+	passString = '?object=https://php-web.herokuapp.com/edit.php?userName=' + userName;
+
+  	FB.api('/me/APP_NAMESPACE:ACTION' + passString,'post',
+     	function(response) {
+          if (!response || response.error) {
+              alert(response.error.message);
+          } 
+          else {
+              alert('Post was successful! Action ID: ' + response.id);
+          } 
+      }
+  );    
+	// CHECK GRAPH CALL
 	 $(document).ready(
             function() {
 	$.ajax({
