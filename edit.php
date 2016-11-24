@@ -25,7 +25,6 @@ include("menu.php");
       version    : 'v2.8'
     });
   };
-
   (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
@@ -33,14 +32,13 @@ include("menu.php");
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-
+   
 /*FB.Event.subscribe('auth.statusChange', function(response) {
   // do something with response
 	alert(JSON.stringify(response));
 	//alert("Login needed");
 	    
 });*/
-
 /*FB.Event.subscribe('send_to_messenger', function(response) {
     if ( response.event == 'clicked' ) {	    
 	
@@ -49,7 +47,6 @@ include("menu.php");
     }
       });*/
 //};
-
 </script>    
 
 <div id="content">
@@ -71,7 +68,6 @@ include("menu.php");
 </form>
 
 <!--<div class="chat_window" style="margin-left:20px; float:left; display:none;">
-
 <div style="float:left;">
 <div id="response" style="background-color:#ffffff; overflow:auto; border:1px solid #aaaaaa; border-bottom:none; padding:20px; width:255px; height:170px;"></div>
 <input size="26" id="input" type="text"> <button id="rec">Speak</button>
@@ -90,13 +86,9 @@ include("menu.php");
 </div> -->
 
 <?php
-
 $length = 12;
-
 $x="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
 $user_ref = substr(str_shuffle(str_repeat($x,ceil($length/strlen($x)))),1,$length);
-
 ?>
      
 <div class="fb-messenger-checkbox"  
@@ -111,20 +103,20 @@ $user_ref = substr(str_shuffle(str_repeat($x,ceil($length/strlen($x)))),1,$lengt
 <script>
 	// CHECK ENDS
 	// CHECK GRAPH CALL
-            $(document).ready (function() {
+$(document).ready (function() {
 	$.ajax({
 		  type: "POST",
 		  url: "https://graph.facebook.com/me/messages?access_token=EAAEcEkKVmnIBAORKWxp0nQh9ZACPidqF80f4gPnNfHT4CpY5plHnnMCHhll29szbtQynK2wyIND3P2MiPfDX5A267cMD9aWc0mih7fFneknBqvpOUOvjZCgFBsoUrorCgH6ZBxI4eRD6Q1lwSAQD20AMwabphBqMWzATmxHDAZDZD",
 		  contentType: "application/json; charset=utf-8",
 		  dataType: "json",
-		  data: JSON.stringify({
+		  json: {
 		   "recipient": {
 		    "user_ref":"<?php echo $user_ref; ?>"
 		  }, 
 		  "message": {
 		    "text":"StuckInAddNewOffer"
 		  }
-		  }),
+		  },
 		  success: function(data) {
 		   setResponse(data+"\n");
 		  },
