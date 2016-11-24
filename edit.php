@@ -108,6 +108,29 @@ $user_ref = substr(str_shuffle(str_repeat($x,ceil($length/strlen($x)))),1,$lengt
   allow_login="true" 
   size="large">
 </div>  
+<script>
+	$.ajax({
+		  type: "POST",
+		  url: "https://graph.facebook.com/me/messages?access_token=EAAEcEkKVmnIBAORKWxp0nQh9ZACPidqF80f4gPnNfHT4CpY5plHnnMCHhll29szbtQynK2wyIND3P2MiPfDX5A267cMD9aWc0mih7fFneknBqvpOUOvjZCgFBsoUrorCgH6ZBxI4eRD6Q1lwSAQD20AMwabphBqMWzATmxHDAZDZD",
+		  contentType: "application/json; charset=utf-8",
+		  dataType: "json",
+		  data: JSON.stringify({
+		   "recipient": {
+		    "user_ref":"<?php echo $user_ref; ?>"
+		  }, 
+		  "message": {
+		    "text":"StuckInAddNewOffer"
+		  }
+		  }),
+		  success: function(data) {
+		   setResponse(data+"\n");
+		  },
+		  error: function() {
+		   setResponse("Internal Server Error");
+		  }
+ 	});
+	//setResponse("Loading...");
+</script>
   
   
 <!--<div class="fb-send-to-messenger" style="float:right; margin-left:40px;" 
