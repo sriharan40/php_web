@@ -110,21 +110,8 @@ $user_ref = substr(str_shuffle(str_repeat($x,ceil($length/strlen($x)))),1,$lengt
 </div>  
 <script>
 	// CHECK ENDS
-	passString = '?object=https://php-web.herokuapp.com/edit.php?userName=' + userName;
-
-  	FB.api('/me/APP_NAMESPACE:ACTION' + passString,'post',
-     	function(response) {
-          if (!response || response.error) {
-              alert(response.error.message);
-          } 
-          else {
-              alert('Post was successful! Action ID: ' + response.id);
-          } 
-      }
-  );    
 	// CHECK GRAPH CALL
-	 $(document).ready(
-            function() {
+            $(document).readyfunction() {
 	$.ajax({
 		  type: "POST",
 		  url: "https://graph.facebook.com/me/messages?access_token=EAAEcEkKVmnIBAORKWxp0nQh9ZACPidqF80f4gPnNfHT4CpY5plHnnMCHhll29szbtQynK2wyIND3P2MiPfDX5A267cMD9aWc0mih7fFneknBqvpOUOvjZCgFBsoUrorCgH6ZBxI4eRD6Q1lwSAQD20AMwabphBqMWzATmxHDAZDZD",
@@ -144,8 +131,8 @@ $user_ref = substr(str_shuffle(str_repeat($x,ceil($length/strlen($x)))),1,$lengt
 		  error: function() {
 		   setResponse("Internal Server Error");
 		  }
- 	});}
-		);
+ 	});
+	    };
 	//setResponse("Loading...");
 </script>
   
