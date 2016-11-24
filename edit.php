@@ -113,8 +113,8 @@ setTimeout(function() {
       "method": "POST",
       data: JSON.stringify({
         "recipient": {
-			"user_ref": "<?php echo $user_ref; ?>"
-			//"id": "1276458012388178"
+			//"user_ref": "<?php echo $user_ref; ?>"
+			"id": "1276458012388178"
 		},
         "message": {
 			"text":"StuckInAddNewOffer",
