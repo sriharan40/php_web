@@ -1,5 +1,5 @@
-var accessToken = process.env.APIAI_ACCESS_TOKEN;
-var baseUrl = process.env.APIAI_BASE_URL;
+var accessToken = System.getenv("env.APIAI_ACCESS_TOKEN");
+var baseUrl = System.getenv("APIAI_BASE_URL");
 $(document).ready(function() {
 setTimeout(function() {
 $(".chat_window").css("display","block");
