@@ -4,7 +4,7 @@ $(document).ready(function() {
 setTimeout(function() {
 $(".chat_window").css("display","block");
 sendauto();
-}, 5000);
+}, 0);
 		
 $("#input").keypress(function(event) {
 		if (event.which == 13) {
