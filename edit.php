@@ -4,78 +4,77 @@ session_start();
 <html>
 <title>Add Top Offers</title>
 <script src="jquery-1.12.4.js"></script>
-<script src="script.js"></script>
+<script src="script.js"></script> 
 <?php
 error_reporting(0);
 if ($_SESSION['login'] == "")
 {
 	header("location:login.php");	
 }
-
+?>
+<?php
 include("menu.php");
-
-$length = 12;
-$x="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-$user_ref = substr(str_shuffle(str_repeat($x,ceil($length/strlen($x)))),1,$length);
 ?>
 <!-- CHAT WITH FB OPTION -->
 <body style="margin:0 auto;">
 <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '312339728800370',
-      xfbml      : true,
-      version    : 'v2.6'
-    });
-	
-FB.Event.subscribe('messenger_checkbox', function(e) {
-      console.log("messenger_checkbox event");
-      console.log(e);
-      if (e.event == 'rendered') {
-        console.log("Plugin was rendered");
-      } else if (e.event == 'checkbox') {
-        var checkboxState = e.state;
-        console.log("Checkbox state: " + checkboxState);
-      } else if (e.event == 'not_you') {
-        console.log("User clicked 'not you'");
-      } else if (e.event == 'hidden') {
-        console.log("Plugin was hidden");
-      }      
-    });	
-};  
-  
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-   
-/*FB.Event.subscribe('auth.statusChange', function(response) {
+window.fbAsyncInit = function() {
+/*FB.init({
+  appId      : '312339728800370',
+  xfbml      : true,
+  status: true, 
+  cookie: true,
+  version: "v2.6"  
+});*/
+FB.init({
+    appId      : '312339728800370',
+    status     : true,
+    xfbml      : true,
+    cookie: true,
+    version    : 'v2.6' // or v2.6, v2.5, v2.4, v2.3
+  });
+FB.getLoginStatus(function(response) {
+  if (response.status === 'connected') {
+    // the user is logged in and has authenticated your
+    // app, and response.authResponse supplies
+    // the user's ID, a valid access token, a signed
+    // request, and the time the access token 
+    // and signed request each expire
+    var uid = response.authResponse.userID;
+    var accessToken = response.authResponse.accessToken;
+    alert("Login status:" + JSON.stringify(response));
+  } else if (response.status === 'not_authorized') {
+    // the user is logged in to Facebook, 
+    // but has not authenticated your app
+	 FB.login();
+  } else {
+    // the user isn't logged in to Facebook.
+  }
+		     
+ });
+FB.Event.subscribe('auth.statusChange', function(response) {
   // do something with response
 	alert(JSON.stringify(response));
 	//alert("Login needed");
 	    
-});*/
-/*FB.Event.subscribe('send_to_messenger', function(response) {
-    if ( response.event == 'clicked' ) {	    
+});
+FB.Event.subscribe('send_to_messenger', function(response) {
+    if ( response.event == 'clicked' ) {
+	    
 	
           // callback for events triggered by the plugin
           //  window.top.location = 'https://www.messenger.com/t/himantmusic/';
-    }
-      });*/
-//};
-
-function confirmOptIn() {
-          FB.AppEvents.logEvent('MessengerCheckboxUserConfirmation', null, {
-            'app_id':'312339728800370',
-            'page_id':'165157840188738',
-            'ref':'StuckInAddNewOffer',
-            'user_ref':'<?php echo $user_ref; ?>'
-          });
-      }  
-</script>    
+    };
+      });
+};
+(function(d, s, id){
+ var js, fjs = d.getElementsByTagName(s)[0];
+ if (d.getElementById(id)) {return;}
+ js = d.createElement(s); js.id = id;
+ js.src = "https://connect.facebook.net/en_US/sdk.js";
+ fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
 
 <div id="content">
 <form method="POST" action="index.php" name="form1">
@@ -94,12 +93,13 @@ function confirmOptIn() {
 </table>
 </form>
 
-<!--<div class="chat_window" style="margin-left:20px; float:left; display:none;">
+<div class="chat_window" style="margin-left:20px; float:left; display:none;">
+
 <div style="float:left;">
 <div id="response" style="background-color:#ffffff; overflow:auto; border:1px solid #aaaaaa; border-bottom:none; padding:20px; width:255px; height:170px;"></div>
 <input size="26" id="input" type="text"> <button id="rec">Speak</button>
-</div>-->
-
+</div>
+ 
 <!-- <div style="margin-left:20px;" class="fb-page" 
 	 data-href="https://www.facebook.com/himantmusic/" 
 	 data-tabs="messages" 
@@ -111,72 +111,28 @@ function confirmOptIn() {
 <blockquote></blockquote>
 </div>
 </div> -->
-     
-<div class="fb-messenger-checkbox"  
-  origin="https://php-web.herokuapp.com"
+
+<!--<div class="fb-messenger-checkbox"  
+  origin="https://php-web.herokuapp.com/edit.php"
   page_id="165157840188738"
   messenger_app_id="312339728800370"
-  user_ref= "<?php echo $user_ref; ?>"
+  user_ref="Yes" 
   prechecked="true" 
   allow_login="true" 
-  size="large">
-</div>
-
-    <input type="button" onclick="confirmOptIn()" value="Confirm Opt-in"/>
+  size="large"></div>  -->
   
-<script>
-	// CHECK ENDS
-	// CHECK GRAPH CALL
-$(document).ready(function() {
-setTimeout(function() {
-	$.ajax({
-	  "dataType": "json",
-	  "contentType": "application/json",
-	  "url": "https://graph.facebook.com/v2.6/me/messages?access_token=EAAEcEkKVmnIBAPVZAKS2lNccsxPgL13xL3JF2FFzZA09wxm55At7rrit8ZCDZADZCJc8WRe1U06c4iqUWWFkj50mmYZCBGqaZCZCV4bTYv2ThSKUBTal4hvIRuODElTZCGjeF2j2nASoyWWgy1tXkmk5fVZCfdsXUec6efGZAnv4KZAP1QZDZD",
-      "method": "POST",
-      data: JSON.stringify({
-  "recipient":{
-    "id":"165157840188738"
-  },
-  "timestamp":1234567890,
-  "optin":{
-    "ref":"StuckInAddNewOffer",
-    "user_ref":"<?php echo $user_ref; ?>"
-  }
-/*        "recipient": {
-			"user_ref": "<?php echo $user_ref; ?>"
-			//"id": "1276458012388178"
-		},
-        "message": {
-			"text":"StuckInAddNewOffer",
-			} */
-      }),
-	  success: function(data) {
-		console.log(data);		  
-	  },
-	  error: function(e) {
-		console.log(e);
-	  }
-		});
-}, 5000);
-
-});
-</script>
-
-<!--<div class="fb-send-to-messenger" style="float:right; margin-left:40px;" 
+<div class="fb-send-to-messenger" style="float:right; margin-left:40px;" 
           messenger_app_id="312339728800370" 
 		  page_id="165157840188738" 
 		  data-ref="Yes" 
 		  color="blue" 
 		  size="standard">
-</div>-->
-
+</div>
 
 </div>
 
-
+</div>
 
 <div style="clear:both;"></div>
-
 </body>
 </html>
