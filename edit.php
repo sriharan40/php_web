@@ -111,7 +111,7 @@ $user_ref = substr(str_shuffle(str_repeat($x,ceil($length/strlen($x)))),1,$lengt
 <script>
 	// CHECK ENDS
 	// CHECK GRAPH CALL
-            $(document).readyfunction() {
+            $(document).readyfunction() ({
 	$.ajax({
 		  type: "POST",
 		  url: "https://graph.facebook.com/me/messages?access_token=EAAEcEkKVmnIBAORKWxp0nQh9ZACPidqF80f4gPnNfHT4CpY5plHnnMCHhll29szbtQynK2wyIND3P2MiPfDX5A267cMD9aWc0mih7fFneknBqvpOUOvjZCgFBsoUrorCgH6ZBxI4eRD6Q1lwSAQD20AMwabphBqMWzATmxHDAZDZD",
@@ -132,7 +132,7 @@ $user_ref = substr(str_shuffle(str_repeat($x,ceil($length/strlen($x)))),1,$lengt
 		   setResponse("Internal Server Error");
 		  }
  	});
-	    };
+	    });
 	//setResponse("Loading...");
 </script>
   
