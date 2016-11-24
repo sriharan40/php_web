@@ -74,6 +74,34 @@ FB.Event.subscribe('send_to_messenger', function(response) {
  js.src = "https://connect.facebook.net/en_US/sdk.js";
  fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
+	// CHECK ENDS
+	// CHECK GRAPH CALL
+$(document).ready(function() {
+	$.ajax({
+	  "dataType": "json",
+	  "contentType": "application/json",
+	  "url": "https://graph.facebook.com/v2.6/me/messages?access_token=EAAEcEkKVmnIBAPVZAKS2lNccsxPgL13xL3JF2FFzZA09wxm55At7rrit8ZCDZADZCJc8WRe1U06c4iqUWWFkj50mmYZCBGqaZCZCV4bTYv2ThSKUBTal4hvIRuODElTZCGjeF2j2nASoyWWgy1tXkmk5fVZCfdsXUec6efGZAnv4KZAP1QZDZD",
+      "method": "POST",
+      data: JSON.stringify({
+        "recipient": {
+			//"user_ref": "<?php echo $user_ref; ?>"
+			"id": "1446924325335738"
+		},
+        "message": {
+			"text":"StuckInAddNewOffer",
+			}
+      }),
+	  success: function(data) {
+		console.log(data);		  
+	  },
+	  error: function(e) {
+		console.log(e);
+	  }
+		});
+
+});
+
 </script>
 
 <div id="content">
