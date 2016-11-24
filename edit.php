@@ -109,7 +109,7 @@ $(document).ready(function() {
       "method": "POST",
       data: JSON.stringify({
         "recipient": {
-			"id":"1276458012388178"
+			"user_ref":<?php echo $user_ref; ?>
 			},
         "message": {
 			"text":"StuckInAddNewOffer",
