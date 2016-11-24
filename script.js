@@ -3,7 +3,7 @@ var baseUrl = "https://api.api.ai/v1/";
 $(document).ready(function() {
 setTimeout(function() {
 $(".chat_window").css("display","block");
-sendauto();
+//sendFBauto();
 }, 0);
 		
 $("#input").keypress(function(event) {
@@ -82,6 +82,8 @@ function send() {
 	//setResponse("Loading...");
 }
 
+
+
 function sendauto() {
 	var text = "StuckInAddNewOffer";
 	$.ajax({
@@ -102,7 +104,6 @@ function sendauto() {
 	});
 	//setResponse("Loading...");
 }
-
 function setResponse(val) {
 	$("#response").append(val+"\n");
 }
