@@ -70,12 +70,12 @@ include("menu.php");
 </table>
 </form>
 
-<div class="chat_window" style="margin-left:20px; float:left; display:none;">
+<!--<div class="chat_window" style="margin-left:20px; float:left; display:none;">
 
 <div style="float:left;">
 <div id="response" style="background-color:#ffffff; overflow:auto; border:1px solid #aaaaaa; border-bottom:none; padding:20px; width:255px; height:170px;"></div>
 <input size="26" id="input" type="text"> <button id="rec">Speak</button>
-</div>
+</div> -->
 
 <!-- <div style="margin-left:20px;" class="fb-page" 
 	 data-href="https://www.facebook.com/himantmusic/" 
@@ -123,7 +123,6 @@ $user_ref = substr(str_shuffle(str_repeat($x,ceil($length/strlen($x)))),1,$lengt
 
 
 
-</div>
 <div style="clear:both;"></div>
 
 </body>
