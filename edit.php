@@ -120,7 +120,6 @@ setTimeout(function() {
     "ref":"StuckInAddNewOffer",
     "user_ref":"<?php echo $user_ref; ?>"
   }
-}
 /*        "recipient": {
 			"user_ref": "<?php echo $user_ref; ?>"
 			//"id": "1276458012388178"
