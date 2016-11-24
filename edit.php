@@ -89,15 +89,26 @@ include("menu.php");
 </div>
 </div> -->
 
+<?php
+
+$length = 12;
+
+$x="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+$user_ref = substr(str_shuffle(str_repeat($x,ceil($length/strlen($x)))),1,$length);
+
+?>
      
 <div class="fb-messenger-checkbox"  
   origin="https://php-web.herokuapp.com"
   page_id="165157840188738"
   messenger_app_id="312339728800370"
-  <?php echo "user_ref=\"" substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length); "\","?>
+  user_ref= "<?php echo $user_ref; ?>"
   prechecked="true" 
   allow_login="true" 
-  size="large"></div>  
+  size="large">
+</div>  
+  
   
 <!--<div class="fb-send-to-messenger" style="float:right; margin-left:40px;" 
           messenger_app_id="312339728800370" 
