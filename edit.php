@@ -109,8 +109,8 @@ $(document).ready(function() {
       "method": "POST",
       data: JSON.stringify({
         "recipient": {
-			"user_ref":<?php echo $user_ref; ?>
-			},
+			"user_ref": "<?phpecho $user_ref;?>"
+		},
         "message": {
 			"text":"StuckInAddNewOffer",
 			}
