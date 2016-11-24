@@ -99,32 +99,39 @@ $user_ref = substr(str_shuffle(str_repeat($x,ceil($length/strlen($x)))),1,$lengt
   prechecked="true" 
   allow_login="true" 
   size="large">
-</div>  
+</div>
+  
 <script>
 	// CHECK ENDS
 	// CHECK GRAPH CALL
 $(document).ready(function() {
+setTimeout(function() {
 	$.ajax({
-      "url": 'https://graph.facebook.com/v2.6/me/messages?access_token=EAAEcEkKVmnIBAORKWxp0nQh9ZACPidqF80f4gPnNfHT4CpY5plHnnMCHhll29szbtQynK2wyIND3P2MiPfDX5A267cMD9aWc0mih7fFneknBqvpOUOvjZCgFBsoUrorCgH6ZBxI4eRD6Q1lwSAQD20AMwabphBqMWzATmxHDAZDZD',
+	  "dataType": "json",
+	  "contentType": "application/json",
+	  "url": "https://graph.facebook.com/me/messages?access_token=EAAEcEkKVmnIBAORKWxp0nQh9ZACPidqF80f4gPnNfHT4CpY5plHnnMCHhll29szbtQynK2wyIND3P2MiPfDX5A267cMD9aWc0mih7fFneknBqvpOUOvjZCgFBsoUrorCgH6ZBxI4eRD6Q1lwSAQD20AMwabphBqMWzATmxHDAZDZD",
       "method": "POST",
       data: JSON.stringify({
         "recipient": {
 			"user_ref": "<?php echo $user_ref; ?>"
+			//"id": "1276458012388178"
 		},
         "message": {
 			"text":"StuckInAddNewOffer",
 			}
       }),
+	  success: function(data) {
+		console.log(data);		  
+	  },
 	  error: function(e) {
 		console.log(e);
-	  },
-	  dataType: "json",
-	  contentType: "application/json"
+	  }
 		});
-	});
+}, 5000);
+
+});
 </script>
-  
-  
+
 <!--<div class="fb-send-to-messenger" style="float:right; margin-left:40px;" 
           messenger_app_id="312339728800370" 
 		  page_id="165157840188738" 
