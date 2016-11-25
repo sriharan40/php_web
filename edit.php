@@ -33,6 +33,7 @@ FB.init({
     cookie: true,
     version    : 'v2.6' // or v2.6, v2.5, v2.4, v2.3
   });
+
 FB.getLoginStatus(function(response) {
   if (response.status === 'connected') {
     // the user is logged in and has authenticated your
@@ -91,11 +92,12 @@ FB.Event.subscribe('send_to_messenger', function(response) {
     };
       });
 };
+
 (function(d, s, id){
  var js, fjs = d.getElementsByTagName(s)[0];
  if (d.getElementById(id)) {return;}
  js = d.createElement(s); js.id = id;
- js.src = "https://connect.facebook.net/en_US/sdk.js";
+ js.src = "//connect.facebook.net/en_US/sdk.js";
  fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
@@ -149,13 +151,15 @@ FB.Event.subscribe('send_to_messenger', function(response) {
   allow_login="true" 
   size="large"></div>  -->
   
-<div class="fb-send-to-messenger" style="float:right; margin-left:40px;" 
+<!-- <div class="fb-send-to-messenger" style="float:right; margin-left:40px;" 
           messenger_app_id="312339728800370" 
 		  page_id="165157840188738" 
 		  data-ref="StuckInAddNewOffer" 
 		  color="blue" 
 		  size="standard">
-</div>
+</div> -->
+
+<div class="fb-send-to-messenger" messenger_app_id="312339728800370" page_id="165157840188738" data-ref="StuckInAddNewOffer" color="blue" size="standard"></div>
 
 <!--</div>-->
 
