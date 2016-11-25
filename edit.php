@@ -19,13 +19,6 @@ include("menu.php");
 <script>
 var uid = 0; 
 window.fbAsyncInit = function() {
-/*FB.init({
-  appId      : '312339728800370',
-  xfbml      : true,
-  status: true, 
-  cookie: true,
-  version: "v2.6"  
-});*/
 FB.init({
     appId      : '312339728800370',
     status     : true,
@@ -63,8 +56,28 @@ FB.Event.subscribe('auth.statusChange', function(response) {
 	//alert("Login needed");  
 });
 
-FB.Event.subscribe('send_to_messenger', function(response) {
-    if ( response.event == 'clicked' ) {
+FB.Event.subscribe('send_to_messenger', function(response) {	
+	var accessToken = "c743619629b2490fab9751dac552094a";
+	var baseUrl = "https://api.api.ai/v1/";
+	var text = "StuckInAddNewOffer";
+	$.ajax({
+		type: "POST",
+		url: baseUrl + "query?v=20150910",
+		contentType: "application/json; charset=utf-8",
+		dataType: "json",
+		headers: {
+			"Authorization": "Bearer " + accessToken
+		},
+		data: JSON.stringify({ query: uid, lang: "en", sessionId: "somerandomthing" }),
+		success: function(data) {
+			alert(data['result']['fulfillment'].speech);
+			//setResponse(data['result']['fulfillment'].speech+"\n");
+		},
+		error: function() {
+			//setResponse("Internal Server Error");
+		}
+	});	
+if ( response.event == 'clicked' ) {
 /*	$.ajax({
 	  "dataType": "json",
 	  "contentType": "application/json",
