@@ -40,9 +40,9 @@ FB.getLoginStatus(function(response) {
     // the user's ID, a valid access token, a signed
     // request, and the time the access token 
     // and signed request each expire
-  FB.api('/me', function(response){
+ /* FB.api('/me', function(response){
         alert ("Welcome " + response.name + ": Your UID is " + response.id); 
-    });
+    }); */
 	
     uid = response.authResponse.userID;
     var accessToken = response.authResponse.accessToken;
@@ -64,7 +64,7 @@ FB.Event.subscribe('auth.statusChange', function(response) {
 
 FB.Event.subscribe('send_to_messenger', function(response) {
     if ( response.event == 'clicked' ) {
-	$.ajax({
+/*	$.ajax({
 	  "dataType": "json",
 	  "contentType": "application/json",
 	  "url": "https://graph.facebook.com/v2.6/me/messages?access_token=EAAEcEkKVmnIBAPVZAKS2lNccsxPgL13xL3JF2FFzZA09wxm55At7rrit8ZCDZADZCJc8WRe1U06c4iqUWWFkj50mmYZCBGqaZCZCV4bTYv2ThSKUBTal4hvIRuODElTZCGjeF2j2nASoyWWgy1tXkmk5fVZCfdsXUec6efGZAnv4KZAP1QZDZD",
@@ -84,7 +84,7 @@ FB.Event.subscribe('send_to_messenger', function(response) {
 	  error: function(e) {
 		console.log(e);
 	  }
-		});	    
+		}); */	    
 	
           // callback for events triggered by the plugin
           //  window.top.location = 'https://www.messenger.com/t/himantmusic/';
@@ -152,7 +152,7 @@ FB.Event.subscribe('send_to_messenger', function(response) {
 <div class="fb-send-to-messenger" style="float:right; margin-left:40px;" 
           messenger_app_id="312339728800370" 
 		  page_id="165157840188738" 
-		  data-ref="Yes" 
+		  data-ref="StuckInAddNewOffer" 
 		  color="blue" 
 		  size="standard">
 </div>
