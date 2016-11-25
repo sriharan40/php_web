@@ -11,8 +11,7 @@ if ($_SESSION['login'] == "")
 {
 	header("location:login.php");	
 }
-?>
-<?php
+
 include("menu.php");
 ?>
 <!-- CHAT WITH FB OPTION -->
@@ -158,9 +157,9 @@ FB.Event.subscribe('send_to_messenger', function(response) {
 		  size="standard">
 </div>
 
-</div>
-
 <!--</div>-->
+
+</div>
 
 <div style="clear:both;"></div>
 </body>
