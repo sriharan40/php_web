@@ -16,7 +16,7 @@ include("menu.php");
 ?>
 <!-- CHAT WITH FB OPTION -->
 <body style="margin:0 auto;">
-<script>
+<!-- <script>
 var uid = 0; 
 window.fbAsyncInit = function() {
 FB.init({
@@ -117,7 +117,7 @@ if ( response.event == 'clicked' ) {
 	// CHECK ENDS
 	// CHECK GRAPH CALL
 
-</script>
+</script>-->
 
 <div id="content">
 <form method="POST" action="index.php" name="form1">
@@ -172,7 +172,7 @@ if ( response.event == 'clicked' ) {
 		  size="standard">
 </div> -->
 
-<div class="fb-send-to-messenger" messenger_app_id="312339728800370" page_id="165157840188738" data-ref="StuckInAddNewOffer" color="blue" size="standard"></div>
+<!-- <div class="fb-send-to-messenger" messenger_app_id="312339728800370" page_id="165157840188738" data-ref="StuckInAddNewOffer" color="blue" size="standard"></div> -->
 
 <!--</div>-->
 
