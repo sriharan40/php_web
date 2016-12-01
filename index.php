@@ -11,9 +11,18 @@ session_start();
 error_reporting(0);
 if ($_SESSION['login'] == "")
 {
-	header("location:login.php");	
+header("location:login.php");	
 }
 $id = $_GET["id"];
+$title = $_POST["title"];
+$sub_title = $_POST["sub_title"];
+$img_url = $_POST["img_url"];
+if($title && $sub_title && $img_url)
+{
+$url = 'https://paypal-payout.herokuapp.com/?category_title='.$title.'&category_sub_title='.$sub_title.'&category_img_url='.$img_url.'';
+file_get_contents($url);	
+}
+
 $offer_name = $_POST["offer_name"];
 $offer_name = str_replace(" ", "%20", $offer_name);
 $link = $_POST["link"];
@@ -43,11 +52,18 @@ include("menu.php");
 foreach($arr1 as $child2) {
 foreach($child2 as $child21) {
 $title = $child21["title"];
+$sub_title = $child21["sub_title"];
+$img_url = $child21["img_url"];
 }
 }
 ?>
-Title: <input type="text" name="title" value="<?php echo $title; ?>" />
-<table cellspacing="0" cellpadding="10" >
+Title: <input type="text" name="title" value="<?php echo $title; ?>" /><<br />
+Sub Title: <input type="text" name="sub_title" value="<?php echo $title; ?>" /><<br />
+Image URL: <input type="text" name="img_url" value="<?php echo $title; ?>" /><<br />
+
+<input type="submit" name="submit" value="Update" />
+<br />
+<table cellspacing="0" style="margin-left:0px;" cellpadding="10" >
 <tr>
 	<thead>
 <th>Offer Name</th>
@@ -59,7 +75,7 @@ Title: <input type="text" name="title" value="<?php echo $title; ?>" />
 foreach($arr as $child) {
 foreach($child as $child1) {
 ?>
-	<tbody>
+<tbody>
 <tr>
 <?php
 echo '<td>'.$child1["offer_name"].'</td>';
@@ -72,7 +88,7 @@ echo '<td>&nbsp;&nbsp; <a href="index.php?id='.$child1["id"].'">Delete</a></td>'
 }
 }
 ?>
-	</tbody>
+</tbody>
 </table>
 <a href="edit.php">Add New</a>
 </div>
