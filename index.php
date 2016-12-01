@@ -32,10 +32,21 @@ file_get_contents($url);
 $data =  file_get_contents("https://paypal-payout.herokuapp.com/?offer=1");
 $arr = json_decode($data, true);
 
+$data1 =  file_get_contents("https://paypal-payout.herokuapp.com/?category=1");
+$arr1 = json_decode($data1, true);
+
 include("menu.php");
 ?>
 <div id="content">
 
+<?php
+foreach($arr1 as $child1) {
+foreach($child2 as $child21) {
+$title = $child21["title"];
+}
+}
+?>
+Title: <input type="text" name="title" value="<?php echo $title; ?>" />
 <table cellspacing="0" cellpadding="10" >
 <tr>
 	<thead>
