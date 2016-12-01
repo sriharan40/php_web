@@ -74,7 +74,7 @@ $img_url = $child21["img_url"];
 </tr>
 </form>
 </table>
-<br />
+
 <table cellspacing="0" style="margin-left:0px;" cellpadding="10" >
 <tr>
 	<thead>
