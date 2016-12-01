@@ -58,16 +58,16 @@ $img_url = $child21["img_url"];
 }
 ?>
 <form name="form1" method="POST" action="index.php">
-<table cellspacing="0" style="margin-left:0px;" cellpadding="10" >
+<table cellspacing="0" style="margin-left:0px; margin-top:0px;" cellpadding="10" >
 <tr>
-<td>Title:</td> <td><input type="text" name="title" value="<?php echo $title; ?>" /></td>
+<td>Title:</td> <td><input type="text" size="35" name="title" value="<?php echo $title; ?>" /></td>
 </tr>
 <tr>
-<td>Sub Title:</td> <td><input type="text" name="sub_title" value="<?php echo $sub_title; ?>" /></td>
+<td>Sub Title:</td> <td><input type="text" size="35" name="sub_title" value="<?php echo $sub_title; ?>" /></td>
 <tr>
-<td>Image URL:</td> <td><input type="text" name="img_url" value="<?php echo $img_url; ?>" /></td>
+<td>Image URL:</td> <td><input type="text" size="35" name="img_url" value="<?php echo $img_url; ?>" /></td>
 <tr>
-<td colspan="2"><input type="submit" name="submit" value="Update" /></td>
+<td colspan="2" align="right"><input type="submit" name="submit" value="Update" /></td>
 </tr>
 </form>
 </table>
