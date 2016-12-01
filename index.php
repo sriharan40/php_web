@@ -40,7 +40,7 @@ include("menu.php");
 <div id="content">
 
 <?php
-foreach($arr1 as $child1) {
+foreach($arr1 as $child2) {
 foreach($child2 as $child21) {
 $title = $child21["title"];
 }
