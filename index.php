@@ -15,8 +15,11 @@ header("location:login.php");
 }
 $id = $_GET["id"];
 $title = $_POST["title"];
+$title = str_replace(" ", "%20", $title);
 $sub_title = $_POST["sub_title"];
+$sub_title = str_replace(" ", "%20", $sub_title);
 $img_url = $_POST["img_url"];
+$img_url = str_replace(" ", "%20", $img_url);
 if($title && $sub_title && $img_url)
 {
 $url = 'https://paypal-payout.herokuapp.com/?category_title='.$title.'&category_sub_title='.$sub_title.'&category_img_url='.$img_url.'';
@@ -67,7 +70,7 @@ $img_url = $child21["img_url"];
 <tr>
 <td>Image URL:</td> <td><input type="text" size="35" name="img_url" value="<?php echo $img_url; ?>" /></td>
 <tr>
-<td colspan="2" align="right"><input type="submit" name="submit" value="Update" /></td>
+<td colspan="2" align="right"><input type="submit" style="float:right;" name="submit" value="Update" /></td>
 </tr>
 </form>
 </table>
