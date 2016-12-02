@@ -85,7 +85,7 @@ if ( response.event == 'clicked' ) {
       "method": "POST",
       data: JSON.stringify({
         "recipient": {
-			//"user_ref": "<?php echo $user_ref; ?>"
+			//"user_ref": "<?php //echo $user_ref; ?>"
 			"id": uid
 		},
         "message": {
@@ -139,9 +139,15 @@ if ( response.event == 'clicked' ) {
 <div class="chat_window" style="margin-left:20px; float:left; display:none;">
 
 <div style="float:left;">
-<div id="response" style="background-color:#ffffff; overflow:auto; border:1px solid #aaaaaa; border-bottom:none; padding:20px; width:255px; height:170px;"></div>
+<iframe width="350" height="430" src="https://console.api.ai/api-client/demo/embedded/44b8113a-9d4f-4ad3-b71d-feee91c13b3e"></iframe>
+	</div>
+
+<div style="float:left;">
+	<div id="response" style="background-color:#ffffff; overflow:auto; border:1px solid #aaaaaa; border-bottom:none; padding:20px; width:255px; height:170px;"></div>
 <input size="26" id="input" type="text"> <button id="rec">Speak</button>
 </div>
+	</div>
+	
  
 <!-- <div style="margin-left:20px;" class="fb-page" 
 	 data-href="https://www.facebook.com/himantmusic/" 
