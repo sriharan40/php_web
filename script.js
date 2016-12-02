@@ -1,5 +1,5 @@
-//var accessToken = <?php getenv("env.APIAI_ACCESS_TOKEN");?>;
-//var baseUrl = <?php getenv("APIAI_BASE_URL");?>;
+var accessToken = "c743619629b2490fab9751dac552094a";
+var baseUrl = "https://api.api.ai/v1/";
 $(document).ready(function() {
 setTimeout(function() {
 $(".chat_window").css("display","block");
