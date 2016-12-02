@@ -74,6 +74,8 @@ function send() {
 		data: JSON.stringify({ query: text, lang: "en", sessionId: "somerandomthing" }),
 		success: function(data) {
 			setResponse(data['result']['fulfillment'].speech);
+			respond(data['result']['fulfillment'].speech);
+			
 		},
 		error: function() {
 			setResponse("Internal Server Error");
@@ -82,7 +84,23 @@ function send() {
 	//setResponse("Loading...");
 }
 
+//CHECK HIMANT TEXT TO SPEECH
+function respond(val) {
+      if (val == "") {
+        val = messageSorry;
+      }
+      if (val !== messageRecording) {
+        var msg = new SpeechSynthesisUtterance();
+        msg.voiceURI = "native";
+        msg.text = val;
+        msg.lang = "en-US";
+        window.speechSynthesis.speak(msg);
+      }
+      $("#spokenResponse").addClass("is-active").find(".spoken-response__text").html(val);
+    }
 
+
+// CHECK ENDS
 
 function sendauto() {
 	var text = "StuckInAddNewOffer";
