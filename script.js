@@ -1,4 +1,4 @@
-var accessToken = "c743619629b2490fab9751dac552094a";
+var accessToken = "abfbb042bf354b45965a4a3135f40224";
 var baseUrl = "https://api.api.ai/v1/";
 $(document).ready(function() {
 setTimeout(function() {
