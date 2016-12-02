@@ -139,7 +139,7 @@ if ( response.event == 'clicked' ) {
 <div class="chat_window" style="margin-left:20px; float:left; display:none;">
 
 <div style="float:left;">
-<iframe width="350" height="430" src="https://console.api.ai/api-client/demo/embedded/44b8113a-9d4f-4ad3-b71d-feee91c13b3e"></iframe>
+<iframe width="350" height="430" src="https://console.api.ai/api-client/demo/embedded/b34aed5b-43f1-4c60-a63f-d580408158e8"></iframe>	
 	</div>
 
 <div style="float:left;">
