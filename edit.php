@@ -143,7 +143,7 @@ if ( response.event == 'clicked' ) {
 <p style="width:255px; padding:10px; color:#fff; margin-top:0px;  background-color:#333;">
 	Voice help desk</p><div id="response" style="padding:20px;padding-top:5px;  height:170px;width:235px;  overflow:auto;"></div>	
 	</div>
-<input size="26" style="width:278px;" id="input" type="text"> <button id="rec">Speak</button>
+<input size="26" style="width:278px; border-top: 1px solid #575757;" id="input" type="text"> <button id="rec">Speak</button>
 </div>
 	</div>
 	
