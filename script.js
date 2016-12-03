@@ -1,12 +1,10 @@
-//var accessToken = "abfbb042bf354b45965a4a3135f40224";
 var accessToken = "";    
 $.ajax({
 		type: "POST",
         url: "config.php",		
-data: {access : "abfbb042bf354b45965a4a3135f40224"},																					
+data: {access : "1"},																					
   success : function(msg){		
-alert(msg);	
-	  accessToken=msg;     		
+		  accessToken=msg;     		
 }							
 });
 var baseUrl = "https://api.api.ai/v1/";
