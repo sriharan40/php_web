@@ -1,5 +1,17 @@
 //var accessToken = "abfbb042bf354b45965a4a3135f40224";
-var accessToken = {{ getenv('APIAI_ACCESS_TOKEN') }};    
+var accessToken = "";    
+$.ajax({
+		type: "POST",
+        url: "config.php",
+		contentType: "application/text; charset=utf-8",
+		dataType: "text",
+													
+				 		success: function(data) {
+						
+		},
+		error: function() {
+				}
+	});
 var baseUrl = "https://api.api.ai/v1/";
 $(document).ready(function() {
 setTimeout(function() {
