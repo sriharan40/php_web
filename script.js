@@ -1,5 +1,5 @@
 //var accessToken = "abfbb042bf354b45965a4a3135f40224";
-var accessToken = process.env[APIAI_ACCESS_TOKEN];    
+var accessToken = {{ getenv('APIAI_ACCESS_TOKEN') }};    
 var baseUrl = "https://api.api.ai/v1/";
 $(document).ready(function() {
 setTimeout(function() {
