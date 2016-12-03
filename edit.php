@@ -139,9 +139,10 @@ if ( response.event == 'clicked' ) {
 <div class="chat_window" style="margin-left:20px; float:left; display:none;">
 
 <div style="float:left;">
-	<div id="response" style="background-color:#ffffff; overflow:auto; border:1px solid #aaaaaa; border-bottom:none; padding:20px; width:255px; height:170px;">		Voice  	
+	<div style="background-color:#ffffff; overflow:auto; border:1px solid #aaaaaa; border-bottom:none; width:255px; height:170px;">			
 <p style="width:100%; padding:8px; color:#fff; background-color:#333;">
-	Voice help desk</p></div>
+	Voice help desk</p><div id="response" style="padding:20px;"></div>	
+	</div>
 <input size="26" id="input" type="text"> <button id="rec">Speak</button>
 </div>
 	</div>
