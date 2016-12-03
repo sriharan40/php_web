@@ -2,9 +2,7 @@
 var accessToken = "";    
 $.ajax({
 		type: "POST",
-        url: "config.php",
-		contentType: "application/text; charset=utf-8",
-		dataType: "text",
+        url: "config.php",		
 data: 'access = 1',																					
   success : function(data){		
 alert(data);	
