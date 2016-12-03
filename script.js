@@ -65,7 +65,7 @@ function send() {
 	setResponse("<p align='right' style='color:blue;'>"+text+"</p>\n");
 	$.ajax({
 		type: "POST",
-		url: baseUrl + "query?v=20150910",
+		url: baseUrl + "tts?v=20150910",
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
 		headers: {
@@ -111,12 +111,13 @@ function sendauto() {
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
 		headers: {
-			"Authorization": "Bearer " + accessToken
+			"Authorization": "Bearer " + accessToken,
+			"Accept-Language": "en-US"			
 		},
 		data: JSON.stringify({ query: text, lang: "en", sessionId: "somerandomthing" }),
 		success: function(data) {
 			setResponse(data['result']['fulfillment'].speech+"\n");
-			window.speechSynthesis.speak(data['result']['fulfillment'].speech);
+			respond(data['result']['fulfillment'].speech);			
 		},
 		error: function() {
 			setResponse("Internal Server Error");
