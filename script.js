@@ -1,5 +1,5 @@
 var accessToken = "abfbb042bf354b45965a4a3135f40224";
-var baseUrl = "https://api.api.ai/v1/tts?v=20150910";
+var baseUrl = "https://api.api.ai/v1/";
 $(document).ready(function() {
 setTimeout(function() {
 $(".chat_window").css("display","block");
@@ -107,7 +107,7 @@ function sendauto() {
 	var text = "StuckInAddNewOffer";
 	$.ajax({
 		type: "POST",
-		url: baseUrl + "query?v=20150910",
+		url: baseUrl + "tts?v=20150910",
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
 		headers: {
@@ -116,6 +116,7 @@ function sendauto() {
 		data: JSON.stringify({ query: text, lang: "en", sessionId: "somerandomthing" }),
 		success: function(data) {
 			setResponse(data['result']['fulfillment'].speech+"\n");
+			window.speechSynthesis.speak(data['result']['fulfillment'].speech);
 		},
 		error: function() {
 			setResponse("Internal Server Error");
