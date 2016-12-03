@@ -5,9 +5,11 @@ $.ajax({
         url: "config.php",
 		contentType: "application/text; charset=utf-8",
 		dataType: "text",
+data: access = 1;				
 													
 				 		success: function(data) {
-						
+alert(data);				
+		
 		},
 		error: function() {
 				}
@@ -57,6 +59,7 @@ function stopRecognition() {
 	}
 	updateRec();
 }
+data: access=1;
 function switchRecognition() {
 	if (recognition) {
 		stopRecognition();
