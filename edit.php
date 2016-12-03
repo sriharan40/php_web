@@ -139,11 +139,11 @@ if ( response.event == 'clicked' ) {
 <div class="chat_window" style="margin-left:20px; float:left; display:none;">
 
 <div style="float:left;">
-	<div style="background-color:#ffffff; border:1px solid #aaaaaa; border-bottom:none; width:255px;">			
-<p style="width:100%; padding:10px; color:#fff; margin-top:0px;  background-color:#333;">
+	<div style="background-color:#ffffff; border:1px solid #aaaaaa; border-bottom:none; width:275px;">			
+<p style="width:255px; padding:10px; color:#fff; margin-top:0px;  background-color:#333;">
 	Voice help desk</p><div id="response" style="padding:20px; height:170px;width:100%;  overflow:auto;"></div>	
 	</div>
-<input size="26" style="width:255px;" id="input" type="text"> <button id="rec">Speak</button>
+<input size="26" style="width:278px;" id="input" type="text"> <button id="rec">Speak</button>
 </div>
 	</div>
 	
@@ -178,9 +178,7 @@ if ( response.event == 'clicked' ) {
 </div> -->
 
 <!-- <div class="fb-send-to-messenger" messenger_app_id="312339728800370" page_id="165157840188738" data-ref="StuckInAddNewOffer" color="blue" size="standard"></div> -->
-
-</div>
-
+  
 </div>
 
 <div style="clear:both;"></div>
