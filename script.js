@@ -82,7 +82,7 @@ function send() {
 	var text = $("#input").val();
 	setResponse("<p align='right' style='color:blue;'>"+text+"</p>\n");
 	$.ajax({
-		type: "POST",
+		type: "GET",
 		url: baseUrl + "tts?v=20150910",
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
