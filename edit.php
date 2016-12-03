@@ -139,10 +139,6 @@ if ( response.event == 'clicked' ) {
 <div class="chat_window" style="margin-left:20px; float:left; display:none;">
 
 <div style="float:left;">
-<iframe width="350" height="430" src="https://console.api.ai/api-client/demo/embedded/b34aed5b-43f1-4c60-a63f-d580408158e8"></iframe>	
-	</div>
-
-<div style="float:left;">
 	<div id="response" style="background-color:#ffffff; overflow:auto; border:1px solid #aaaaaa; border-bottom:none; padding:20px; width:255px; height:170px;"></div>
 <input size="26" id="input" type="text"> <button id="rec">Speak</button>
 </div>
