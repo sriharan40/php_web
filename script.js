@@ -1,5 +1,5 @@
 var accessToken = "abfbb042bf354b45965a4a3135f40224";
-var baseUrl = "https://api.api.ai/v1/";
+var baseUrl = "https://api.api.ai/v1/tts?v=20150910";
 $(document).ready(function() {
 setTimeout(function() {
 $(".chat_window").css("display","block");
@@ -69,7 +69,8 @@ function send() {
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
 		headers: {
-			"Authorization": "Bearer " + accessToken
+			"Authorization": "Bearer " + accessToken,
+			"Accept-Language": "en-US"
 		},
 		data: JSON.stringify({ query: text, lang: "en", sessionId: "somerandomthing" }),
 		success: function(data) {
