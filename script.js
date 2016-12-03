@@ -129,4 +129,6 @@ function sendauto() {
 }
 function setResponse(val) {
 	$("#response").append(val+"\n");
+	var objDiv = document.getElementById("response");
+	objDiv.scrollTop = objDiv.scrollHeight;	
 }
