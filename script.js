@@ -62,18 +62,18 @@ function updateRec() {
 }
 
 //CHECK HIMANT TEXT TO SPEECH
-function respond(val) {
-      if (val == "") {
-        val = messageSorry;
-      }
-      if (val !== messageRecording) {
-        var msg = new SpeechSynthesisUtterance(val);
+    function respond(val) {
+    //  if (val == "") {
+    //    val = messageSorry;
+    //   }
+
+      //if (val !== messageRecording) {
+        var msg = new SpeechSynthesisUtterance();
         msg.voiceURI = "native";
         msg.text = val;
         msg.lang = "en-US";
         window.speechSynthesis.speak(msg);
-      }
-      $(".chat_window").addClass("is-active").find("#response").html(val);
+     // }
     }
 // CHECK ENDS
 
@@ -83,7 +83,7 @@ function send() {
 	setResponse("<p align='right' style='color:blue;'>"+text+"</p>\n");
 	$.ajax({
 		type: "GET",
-		url: baseUrl + "tts?v=20150910",
+		url: baseUrl + "query?v=20150910",
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
 		headers: {
@@ -94,7 +94,7 @@ function send() {
 		success: function(data) {
 			console.log("Data:"+data);
 			setResponse(data['result']['fulfillment'].speech);
-			respond(data);
+			respond(data['result']['fulfillment'].speech);
 			
 		},
 		error: function() {
@@ -109,7 +109,7 @@ function sendauto() {
 	var text = "StuckInAddNewOffer";
 	$.ajax({
 		type: "POST",
-		url: baseUrl + "tts?v=20150910",
+		url: baseUrl + "query?v=20150910",
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
 		headers: {
