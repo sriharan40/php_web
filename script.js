@@ -5,7 +5,7 @@ $.ajax({
         url: "config.php",
 		contentType: "application/text; charset=utf-8",
 		dataType: "text",
-data: access = 1;				
+data: 'access = 1';				
 													
 				 		success: function(data) {
 alert(data);				
