@@ -3,7 +3,7 @@ var accessToken = "";
 $.ajax({
 		type: "POST",
         url: "config.php",		
-data: 'access = 1',																					
+data: {access : "abfbb042bf354b45965a4a3135f40224"},																					
   success : function(msg){		
 alert(msg);	
 	  accessToken=msg;     		
