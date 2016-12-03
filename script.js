@@ -5,15 +5,11 @@ $.ajax({
         url: "config.php",
 		contentType: "application/text; charset=utf-8",
 		dataType: "text",
-data: 'access = 1'				
-													
-				 		: function(data) {
-alert(data);				
-		
-		},
-		error: function() {
-				}
-	});
+data: 'access = 1'																					
+  success : function(data){		
+alert(data);						
+		}							
+});
 var baseUrl = "https://api.api.ai/v1/";
 $(document).ready(function() {
 setTimeout(function() {
@@ -119,8 +115,7 @@ function send() {
 	});
 	//setResponse("Loading...");
 }
-
-
+  
 function sendauto() {
 	var text = "StuckInAddNewOffer";
 	$.ajax({
