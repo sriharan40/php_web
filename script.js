@@ -82,13 +82,13 @@ function send() {
 	var text = $("#input").val();
 	setResponse("<p align='right' style='color:blue;'>"+text+"</p>\n");
 	$.ajax({
-		type: "GET",
-		url: baseUrl + "query?v=20150910",
+		type: "POST",
+        url: baseUrl + "query?v=20150910",
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
 		headers: {
 			"Authorization": "Bearer " + accessToken,
-			"Accept-Language": "en-US"
+			"Accept-Language": "en-US"						
 		},
 		data: JSON.stringify({ query: text, lang: "en", sessionId: "somerandomthing" }),
 		success: function(data) {
@@ -109,7 +109,7 @@ function sendauto() {
 	var text = "StuckInAddNewOffer";
 	$.ajax({
 		type: "POST",
-		url: baseUrl + "query?v=20150910",
+        url: baseUrl + "query?v=20150910",
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
 		headers: {
