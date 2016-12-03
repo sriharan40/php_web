@@ -3,10 +3,10 @@ var accessToken = "";
 $.ajax({
 		type: "POST",
         url: "config.php",		
-data: {access : "1"},																					
-  success : function(data){		
-alert(data);	
-	  accessToken=data;     		
+data: 'access = 1',																					
+  success : function(msg){		
+alert(msg);	
+	  accessToken=msg;     		
 }							
 });
 var baseUrl = "https://api.api.ai/v1/";
