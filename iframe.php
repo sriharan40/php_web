@@ -5,6 +5,11 @@ body {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
 }
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
 </style>
 <script src="jquery-1.12.4.js"></script>
 <script>
