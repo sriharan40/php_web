@@ -74,7 +74,7 @@ function setInput(text) {
 }
 
 function updateRec() {
-	$("#rec").text(recognition ? "Stop" : "Speak");
+	$("#rec").attr('src', recognition ? "mike_active.png" : "mike.png");
 }
 
 //CHECK HIMANT TEXT TO SPEECH
@@ -124,4 +124,4 @@ function setResponse(val) {
 <p style="width:100%; padding:10px; padding-left:0px; padding-right:0px; color:#fff; max-width:100%; margin-top:0px;  background-color:#333;">&nbsp;&nbsp;&nbsp;&nbsp;Voice help desk</p>
 <div id="response" style="padding:20px; padding-top:5px;  height:65%; width:93%; overflow:auto;"></div>	
 </div>
-<input size="26" style="width:99%; padding:10px; float:left; border-top: 1px solid #575757;" id="input" type="text"> <button style="margin-left:-60px; padding:10px;" id="rec">Speak</button>
+<input size="26" style="width:99%; padding:10px; float:left; border: 1px solid #575757;" id="input" type="text"> <img src="mike.png" width="36" style="margin-left:-40px; cursor:pointer;" id="rec" />
