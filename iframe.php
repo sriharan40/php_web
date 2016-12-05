@@ -1,3 +1,11 @@
+<style>
+body {
+    background: #EEE;
+    overflow-x: hidden;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+</style>
 <script src="jquery-1.12.4.js"></script>
 <script>
 var accessToken = "<?php echo $_GET["access_token"]; ?>";
@@ -109,6 +117,6 @@ function setResponse(val) {
 </script>
 <div style="background-color:#ffffff; border:1px solid #aaaaaa; border-bottom:none; width:99%;">			
 <p style="width:100%; padding:10px; padding-left:0px; padding-right:0px; color:#fff; max-width:100%; margin-top:0px;  background-color:#333;">&nbsp;&nbsp;&nbsp;&nbsp;Voice help desk</p>
-<div id="response" style="padding:20px; padding-top:5px;  height:90%; width:93%; overflow:auto;"></div>	
+<div id="response" style="padding:20px; padding-top:5px;  height:75%; width:93%; overflow:auto;"></div>	
 </div>
 <input size="26" style="width:99%; padding:10px; float:left; border-top: 1px solid #575757;" id="input" type="text"> <button style="margin-left:-60px; padding:10px;" id="rec">Speak</button>
