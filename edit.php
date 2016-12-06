@@ -146,7 +146,7 @@ if ( response.event == 'clicked' ) {
 <input size="26" style="width:278px; border-top: 1px solid #575757;" id="input" type="text"> <button id="rec">Speak</button>
 </div>-->
 
-<iframe frameborder="0" scrolling="no" width="350" height="390" src="https://php-web.herokuapp.com/iframe.php?access_token=abfbb042bf354b45965a4a3135f40224"></iframe>	
+<iframe frameborder="0" scrolling="no" width="420" height="390" src="https://php-web.herokuapp.com/iframe.php?access_token=abfbb042bf354b45965a4a3135f40224"></iframe>	
 	
 </div>
 	
