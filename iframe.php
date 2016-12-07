@@ -10,7 +10,6 @@ body {
 ::-webkit-scrollbar { 
     display: none; 
 }
-
 </style>
 <script src="jquery-1.12.4.js"></script>
 <script>
@@ -94,7 +93,7 @@ function send() {
 	setResponse("<p align='right' style='color:blue;'>"+text+"</p>\n");
 	$.ajax({
 		type: "POST",
-        	url: baseUrl + "query",
+        	url: baseUrl + "query?v=20150910",
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
 		headers: {
