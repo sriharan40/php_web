@@ -1,7 +1,7 @@
-<html style="padding:15px;">
 <style>
 body {
     background: #EEE;
+    padding:15px;	
     overflow-x: hidden;
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
@@ -126,4 +126,3 @@ function setResponse(val) {
 <div id="response" style="padding:20px; padding-top:5px;  height:65%; width:93%; overflow:auto;"></div>	
 </div>
 <input size="30" style="width:99%; padding:10px; float:left; border: 1px solid #575757;" id="input" type="text"> <img src="mike.png" width="36" style="cursor:pointer; position: absolute; bottom: 0px; right: -30px; cursor: pointer; width: 110px;" id="rec" />
-</html>
