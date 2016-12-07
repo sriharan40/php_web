@@ -94,7 +94,7 @@ function send() {
 	setResponse("<p align='right' style='color:blue;'>"+text+"</p>\n");
 	$.ajax({
 		type: "POST",
-        url: baseUrl + "query?v=20150910",
+        	url: baseUrl + "query",
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
 		headers: {
