@@ -33,6 +33,7 @@
 		<ul>
 			 <li> <a href="index.php">Top Selling Offers</a></li>
 			 <li><a href="fb_campaign.php">Broadcast to FB users</a></li>
+			 <li><a href="poc_voice.php.php">POC for voice</a></li>
 		</ul>
 	</li>
 	<li>
