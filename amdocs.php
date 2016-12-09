@@ -2,7 +2,7 @@
 <script>
 	$.ajax({
 		type: "POST",
-        url: "http://ipllin07.amdocs.com/rest/nphproxy.pl/000000A/http/lrt930s150m377:51000/rp-webapp-9-common/Login",
+        url: "https://ipllin07.amdocs.com/rest/nphproxy.pl/000000A/http/lrt930s150m377:51000/rp-webapp-9-common/Login",
 		'Accept': 'application/json',
 		'Content-Type': 'application/json',
         'Cache-Control': 'no-cache',
