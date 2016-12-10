@@ -3,7 +3,7 @@
 	$.ajax({
 		'data': JSON.stringify({"Credentials":{"user":"Asmsa1","password":"Asmsa1"}}),
 	   'type': 'POST',
-        'url': "rest/nphproxy.pl/000000A/http/lrt930s150m377:51000/rp-webapp-9-common/Login",
+        'url': "https://ipllin07.amdocs.com/rest/nphproxy.pl/000000A/http/lrt930s150m377:51000/rp-webapp-9-common/Login",
 		'Accept': 'application/json',
 		headers: {
 		'contentType': 'application/json'
