@@ -7,6 +7,7 @@
 	    'crossDomain': true,
 		'Accept': 'application/json',
 		headers: {
+		'dataType': 'jsonp',			
 		'contentType': 'application/json'
 		},
 		success: function(data) {
