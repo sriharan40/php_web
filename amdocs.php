@@ -34,9 +34,9 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'Content-Type: application/json'                                                                               
 ));                                                                                                                   
          
-$info = curl_getinfo($ch);
+echo $info = curl_getinfo($ch);
 		 
-echo $result = curl_exec($ch);
+$result = curl_exec($ch);
 
 echo $header = substr($result, 0, $info['uxfauthorization']);
 
