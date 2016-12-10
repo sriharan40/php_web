@@ -8,7 +8,6 @@
 		'dataType': 'jsonp',
 		'Accept': 'application/json',
 		headers: {
-	    'crossDomain': true,			
 		'contentType': 'application/json'
 		},
 		success: function(data) {
