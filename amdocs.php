@@ -6,10 +6,8 @@
 	    'type': 'POST',
 	    'crossDomain': true,
 		'Accept': 'application/json',
-		headers: {
-		'dataType': 'jsonp',			
+		'dataType': 'jsonp',		
 		'contentType': 'application/json'
-		},
 		success: function(data) {
 		alert(data);	
 		}
