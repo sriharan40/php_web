@@ -12,7 +12,7 @@ var Credentials = {"user":"Asmsa1","password":"Asmsa1"};
 	    'crossDomain': true,
 		'Accept': 'application/json',
 		'contentType': 'application/json; charset=utf-8',
-		'dataType': 'jsonp'
+		'dataType': 'jsonp',
 		success:function(){
                 try{
                     alert("ok");
