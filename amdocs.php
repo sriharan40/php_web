@@ -8,8 +8,5 @@
 		'Accept': 'application/json',
 		'dataType': 'jsonp',		
 		'contentType': 'application/json'
-		success: function(data) {
-		alert(data);	
-		}
 	});
 </script>
