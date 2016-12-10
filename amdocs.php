@@ -29,7 +29,6 @@ $ch = curl_init('http://ipllin07.amdocs.com/rest/nphproxy.pl/000000A/http/lrt930
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
 curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);    
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
-curl_setopt($ch, CURLOPT_NOBODY, true);
 curl_setopt($ch, CURLOPT_HEADER, true);                                                              
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
     'Content-Type: application/json'                                                                               
