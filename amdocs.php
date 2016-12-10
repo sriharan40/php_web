@@ -3,10 +3,14 @@
 var Credentials = {"user":"Asmsa1","password":"Asmsa1"};
 	$.ajax({
 		url: "http://ipllin07.amdocs.com/rest/nphproxy.pl/000000A/http/lrt930s150m377:51000/rp-webapp-9-common/Login",
-	    method: "POST",
+	    type: "POST",
     	data: JSON.stringify({"Credentials": Credentials}),
-		dataType: "json",
 		contentType: "application/json; charset=utf-8",
+		datatype: "jsonp",
+		async: true,
+		xhrFields: {
+		   withCredentials: false
+		},		
 	    crossDomain: true,
 		Accept: "application/json",
 		success:function(){
