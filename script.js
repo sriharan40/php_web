@@ -36,6 +36,10 @@ function startRecognition() {
 		for (var i = event.resultIndex; i < event.results.length; ++i) {
 			text += event.results[i][0].transcript;
 		}
+		if(text.match(/^[\(\)\s\-\+\d]{10,17}$/))
+		{
+		text = text.replace(/\D/g, "");
+		}
 		setInput(text);
 		stopRecognition();
 	};
