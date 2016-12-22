@@ -1,10 +1,10 @@
 var accessToken = "";    
 $.ajax({
-		type: "POST",
-        url: "config.php",		
+type: "POST",
+url: "config.php",		
 data: {access : "1"},																					
-  success : function(msg){		
-		  accessToken=msg;     		
+success : function(msg){		
+accessToken=msg;     		
 }							
 });
 var baseUrl = "https://api.api.ai/v1/";
@@ -38,7 +38,7 @@ function startRecognition() {
 		}
 		if(text.match(/^[\(\)\s\-\+\d]{10,17}$/))
 		{
-		text = text.replace(/\D/g, "");
+		text = text.replace(/\D/g,'');
 		}
 		setInput(text);
 		stopRecognition();
