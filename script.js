@@ -28,9 +28,9 @@ $("#input").keypress(function(event) {
 var recognition;
 function startRecognition() {
 	
-	recognition = new SpeechRecognition || webkitSpeechRecognition || null;
+	//recognition = new SpeechRecognition || webkitSpeechRecognition || null;
 	
-	//recognition = new webkitSpeechRecognition();
+	recognition = new webkitSpeechRecognition();
 	recognition.onstart = function(event) {
 		updateRec();
 	};
