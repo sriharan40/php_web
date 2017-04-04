@@ -20,7 +20,7 @@ $pass = $_POST["pass"];
 
 $pass = md5($pass);
 
-$url = 'https://paypal-payout.herokuapp.com/?user_name='.$loginid.'&password='.$pass.'';
+$url = getenv("webservice_url").'/?user_name='.$loginid.'&password='.$pass.'';
 
 $result = file_get_contents($url);
 
