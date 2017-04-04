@@ -22,7 +22,7 @@ $img_url = $_POST["img_url"];
 $img_url = str_replace(" ", "%20", $img_url);
 if($title && $sub_title && $img_url)
 {
-$url = 'https://paypal-payout.herokuapp.com/?category_title='.$title.'&category_sub_title='.$sub_title.'&category_img_url='.$img_url.'';
+$url = getenv("webservice_url").'/?category_title='.$title.'&category_sub_title='.$sub_title.'&category_img_url='.$img_url.'';
 file_get_contents($url);	
 }
 
@@ -32,19 +32,19 @@ $link = $_POST["link"];
 $link = str_replace(" ", "%20", $link);
 if($offer_name && $link)
 {
-$url = 'https://paypal-payout.herokuapp.com/?offer_name='.$offer_name.'&description='.$link.'';
+$url = getenv("webservice_url").'/?offer_name='.$offer_name.'&description='.$link.'';
 file_get_contents($url);	
 }
 
 if($id)
 {
-$url = 'https://paypal-payout.herokuapp.com/?delete_offer=1&id='.$id.'';
+$url = getenv("webservice_url").'/?delete_offer=1&id='.$id.'';
 file_get_contents($url);
 }
-$data =  file_get_contents("https://paypal-payout.herokuapp.com/?offer=1");
+$data =  file_get_contents(getenv("webservice_url")."/?offer=1");
 $arr = json_decode($data, true);
 
-$data1 =  file_get_contents("https://paypal-payout.herokuapp.com/?category=1");
+$data1 =  file_get_contents(getenv("webservice_url")."/?category=1");
 $arr1 = json_decode($data1, true);
 
 include("menu.php");
