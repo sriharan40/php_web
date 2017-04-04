@@ -34,7 +34,7 @@ $option = implode(",",$option);
 
 if($message && $option)
 {
-$url1 = "https://paypal-payout.herokuapp.com";
+$url1 = getenv("webservice_url");
 $data = file_get_contents($url1);
 $arr = json_decode($data, true);
 foreach($arr as $child) {
