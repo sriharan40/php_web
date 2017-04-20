@@ -21,6 +21,9 @@ $sub_title = $_POST["sub_title"];
 $sub_title = str_replace(" ", "%20", $sub_title);
 $img_url = $_POST["img_url"];
 $img_url = str_replace(" ", "%20", $img_url);
+
+include("menu.php");
+	
 if($title && $sub_title && $img_url)
 {
 $url = getenv("webservice_url").'/?category_title='.$title.'&category_sub_title='.$sub_title.'&category_img_url='.$img_url.'';
@@ -56,7 +59,7 @@ $arr = json_decode($data, true);
 $data1 =  file_get_contents(getenv("webservice_url")."/?category=1");
 $arr1 = json_decode($data1, true);
 
-include("menu.php");
+
 ?>
 <div id="content">
 
@@ -111,7 +114,7 @@ echo '<td>&nbsp;&nbsp; <a href="index.php?id='.$child1["id"].'">Delete</a></td>'
 ?>
 </tbody>
 </table>
-<a href="edit.php">Add New</a> &nbsp;<a href="index.php?notify=1">Notify FB Users</a>
+<a href="edit.php">Add New</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.php?notify=1">Notify FB Users</a>
 </div>
 <div style="clear:both;"></div>
 </body>
