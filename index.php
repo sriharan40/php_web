@@ -14,6 +14,7 @@ if ($_SESSION['login'] == "")
 header("location:login.php");	
 }
 $id = $_GET["id"];
+$notify = $_GET["notify"];
 $title = $_POST["title"];
 $title = str_replace(" ", "%20", $title);
 $sub_title = $_POST["sub_title"];
@@ -41,6 +42,14 @@ if($id)
 $url = getenv("webservice_url").'/?delete_offer=1&id='.$id.'';
 file_get_contents($url);
 }
+
+if($notify)
+{
+$url = getenv("webservice_url").'/?notify=1';
+file_get_contents($url);
+echo "Notification sent successfully";	
+}
+	
 $data =  file_get_contents(getenv("webservice_url")."/?offer=1");
 $arr = json_decode($data, true);
 
@@ -102,7 +111,7 @@ echo '<td>&nbsp;&nbsp; <a href="index.php?id='.$child1["id"].'">Delete</a></td>'
 ?>
 </tbody>
 </table>
-<a href="edit.php">Add New</a>
+<a href="edit.php">Add New</a> &nbsp;<a href="index.php?notify=1">Notify FB Users</a>
 </div>
 <div style="clear:both;"></div>
 </body>
