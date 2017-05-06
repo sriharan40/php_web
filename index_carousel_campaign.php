@@ -28,7 +28,7 @@ include("menu.php");
 	
 if($title && $sub_title && $img_url && $link)
 {
-$url = getenv("webservice_url").'/?title='.$title.'&sub_title='.$sub_title.'&description='.$link.'&img_url='.$img_url.'&category_id=2';
+$url = getenv("webservice_url").'/?title='.$title.'&sub_title='.$sub_title.'&description='.$link.'&img_url='.$img_url.'&category_id="2"';
 file_get_contents($url);	
 }
 
@@ -50,8 +50,8 @@ file_get_contents($url);
 $data =  file_get_contents(getenv("webservice_url")."/?offer_campaign=1");
 $arr = json_decode($data, true);
 
-$data1 =  file_get_contents(getenv("webservice_url")."/?category=1");
-$arr1 = json_decode($data1, true);
+//$data1 =  file_get_contents(getenv("webservice_url")."/?category=1");
+//$arr1 = json_decode($data1, true);
 
 
 ?>
