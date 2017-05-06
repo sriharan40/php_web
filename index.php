@@ -106,7 +106,7 @@ foreach($child as $child1) {
 <?php
 echo '<td>'.$child1["offer_name"].'</td>';
 echo '<td>'.$child1["sub_title"].'</td>';
-echo '<td><div style="width:270px; word-wrap:break-word;">'.$child1["image_url"].'</div></td>';
+echo '<td><div style="width:290px; word-wrap:break-word;">'.$child1["image_url"].'</div></td>';
 echo '<td>'.$child1["description"].'</td>';
 echo '<td>&nbsp;&nbsp; <a href="index.php?id='.$child1["id"].'">Delete</a></td>';
 ?>
