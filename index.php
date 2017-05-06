@@ -28,7 +28,7 @@ include("menu.php");
 	
 if($title && $sub_title && $img_url && $link)
 {
-$url = getenv("webservice_url").'/?title='.$title.'&sub_title='.$sub_title.'&description='.$link.'&img_url='.$img_url.'';
+$url = getenv("webservice_url").'/?title='.$title.'&sub_title='.$sub_title.'&description='.$link.'&img_url='.$img_url.'&category_id=1';
 file_get_contents($url);	
 }
 
@@ -105,7 +105,7 @@ foreach($child as $child1) {
 <tr>
 <?php
 echo '<td>'.$child1["offer_name"].'</td>';
-echo '<td>'.$child1["offer_subtitle"].'</td>';
+echo '<td>'.$child1["sub_title"].'</td>';
 echo '<td>'.$child1["image_url"].'</td>';
 echo '<td>'.$child1["description"].'</td>';
 echo '<td>&nbsp;&nbsp; <a href="index.php?id='.$child1["id"].'">Delete</a></td>';
