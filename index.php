@@ -28,7 +28,7 @@ include("menu.php");
 	
 if($title && $sub_title && $img_url && $link)
 {
-$url = getenv("webservice_url").'/?title='.$title.'&sub_title='.$sub_title.'&description='.$link.'&img_url='.$img_url.'&category_id="1"';
+$url = getenv("webservice_url").'/?title='.$title.'&sub_title='.$sub_title.'&description='.$link.'&img_url='.$img_url.'&category_id=1';
 file_get_contents($url);	
 }
 
