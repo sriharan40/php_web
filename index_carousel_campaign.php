@@ -3,7 +3,7 @@ session_start();
 ?>
 <html>
 <link rel="stylesheet" type="text/css" href="style.css" />
-<title>Awesome Offers</title>
+<title>Carousel Offers Campaign</title>
 <body style="margin:0 auto;">
 <style>
 </style>
@@ -35,7 +35,7 @@ file_get_contents($url);
 /* $offer_name = $_POST["offer_name"];
 $offer_name = str_replace(" ", "%20", $offer_name);
 
-if($offer_name )
+if($offer_name && $link)
 {
 $url = getenv("webservice_url").'/?offer_name='.$offer_name.'&description='.$link.'';
 file_get_contents($url);	
@@ -47,7 +47,7 @@ $url = getenv("webservice_url").'/?delete_offer=1&id='.$id.'';
 file_get_contents($url);
 }
 	
-$data =  file_get_contents(getenv("webservice_url")."/?offer=1");
+$data =  file_get_contents(getenv("webservice_url")."/?offer_campaign=1");
 $arr = json_decode($data, true);
 
 $data1 =  file_get_contents(getenv("webservice_url")."/?category=1");
@@ -114,10 +114,10 @@ echo '<td>&nbsp;&nbsp; <a href="index.php?id='.$child1["id"].'">Delete</a></td>'
 ?>
 </tbody>
 </table>
-<a href="edit.php">Add New</a> <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="edit_carousel_campaign.php">Add New</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="index.php?notify=1">Notify FB Users</a>-->
+<a href="index.php?notify=1">Notify FB Users</a>
 </div>
 <div style="clear:both;"></div>
 </body>

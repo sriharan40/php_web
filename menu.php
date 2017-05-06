@@ -31,7 +31,8 @@
 	<li>
 		<a href="#">Business Cases</a>
 		<ul>
-			 <li> <a href="index.php">Top Selling Offers</a></li>
+			 <li> <a href="index.php">Awesome Offers</a></li>
+			 <li> <a href="index_carousel_campaign.php">Carousel Campaign</a></li>			 
 			 <li><a href="fb_campaign.php">Broadcast to FB users</a></li>
 			 <li><a href="fb_campaign_aws.php">Broadcast to FB users via AWS</a></li>
 			 <li><a href="poc_voice.php">POC for voice</a></li>

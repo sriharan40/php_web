@@ -2,7 +2,7 @@
 session_start();
 ?>
 <html>
-<title>Add Awesome Offers</title>
+<title>Add Carousel Campaign Offers</title>
 <script src="jquery-1.12.4.js"></script>
 <script src="script.js"></script> 
 <?php
@@ -120,7 +120,7 @@ if ( response.event == 'clicked' ) {
 </script>-->
 
 <div id="content">
-<form method="POST" action="index.php" name="form1">
+<form method="POST" action="index_carousel_campaign.php" name="form1">
 <table cellspacing="0" cellpadding="10">
 <tbody>
 <tr>
