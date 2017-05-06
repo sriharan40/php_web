@@ -89,11 +89,13 @@ echo "Notification sent successfully";
 
 <table cellspacing="0" style="margin-left:0px;" cellpadding="10" >
 <tr>
-	<thead>
-<th>Offer Name</th>
+<thead>
+<th>Offer Title</th>
+<th>Offer Sub Title</th>
+<th>Image URL</th>
 <th>Description / Link</th>
 <th>Action</th>
-	</thead>
+</thead>
 </tr>
 <?php
 foreach($arr as $child) {
@@ -103,6 +105,8 @@ foreach($child as $child1) {
 <tr>
 <?php
 echo '<td>'.$child1["offer_name"].'</td>';
+echo '<td>'.$child1["offer_subtitle"].'</td>';
+echo '<td>'.$child1["image_url"].'</td>';
 echo '<td>'.$child1["description"].'</td>';
 echo '<td>&nbsp;&nbsp; <a href="index.php?id='.$child1["id"].'">Delete</a></td>';
 ?>
