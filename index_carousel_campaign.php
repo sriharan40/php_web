@@ -11,7 +11,7 @@ session_start();
 error_reporting(0);
 if ($_SESSION['login'] == "")
 {
-header("location:login.php");	
+header("location:login.php");
 }
 $id = $_GET["id"];
 $notify = $_GET["notify"];
@@ -47,7 +47,7 @@ $url = getenv("webservice_url").'/?delete_offer=1&id='.$id.'';
 file_get_contents($url);
 }
 	
-$data =  file_get_contents(getenv("webservice_url")."/?offer_campaign=1");
+$data =  file_get_contents(getenv("webservice_url")."/?offer_campaign=2");
 $arr = json_decode($data, true);
 
 //$data1 =  file_get_contents(getenv("webservice_url")."/?category=1");
