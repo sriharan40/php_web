@@ -67,7 +67,7 @@ $img_url = $child21["img_url"];
 }
 if($notify)
 {
-$url = getenv("webservice_url").'/?notify=1';
+$url = getenv("webservice_url").'/?notify=2';
 file_get_contents($url);
 echo "Notification sent successfully";	
 }
@@ -121,7 +121,7 @@ echo '<td>&nbsp;&nbsp; <a href="index_carousel_campaign.php?id='.$child1["id"].'
 <a href="edit_carousel_campaign.php">Add New</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="index_carousel_campaign.php?notify=2">Notify FB Users</a>
+<a href="index_carousel_campaign.php?notify=1">Notify FB Users</a>
 </div>
 <div style="clear:both;"></div>
 </body>
